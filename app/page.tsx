@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Home() {
@@ -8,9 +9,11 @@ export default function Home() {
 			</h1>
 			<div className='flex w-screen justify-center'>
 				<div className='grid grid-cols-2 gap-8 w-1/2'>
-					<div className='text-center py-5 border-[3px] border-blue-900 rounded-lg bg-blue-700 hover:bg-blue-500'>
-						Item IDs
-					</div>
+					<Link href='/items'>
+						<div className='text-center py-5 border-[3px] border-blue-900 rounded-lg bg-blue-700 hover:bg-blue-500'>
+							Item IDs
+						</div>
+					</Link>
 					<div className='text-center py-5 border-[3px] border-blue-900 rounded-lg bg-blue-700 hover:bg-blue-500'>
 						Coming Soon...
 					</div>
