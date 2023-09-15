@@ -1,0 +1,90 @@
+[
+	{
+		"name": ".27 Caliber ammo",
+		"id": "002B559C"
+	},
+	{
+		"name": ".45 ACP ammo",
+		"id": "002B5598"
+	},
+	{
+		"name": ".43 MI Array ammo",
+		"id": "002B559A"
+	},
+	{
+		"name": ".50 Caliber Caseless ammo",
+		"id": "002B5597"
+	},
+	{
+		"name": ".50 MI Array ammo",
+		"id": "002B5596"
+	},
+	{
+		"name": "1.5kV LZR Cartridge ammo",
+		"id": "002BAE3F"
+	},
+	{
+		"name": "3kV LZR Cartridge ammo",
+		"id": "0000E8EC"
+	},
+	{
+		"name": "11MM Caseless ammo",
+		"id": "002B5595"
+	},
+	{
+		"name": "12.5MM ST Rivet ammo",
+		"id": "002B5594"
+	},
+	{
+		"name": "12G Shotgun Shell ammo",
+		"id": "000547A1"
+	},
+	{
+		"name": "15X25 CLL Shotgun Shell ammo",
+		"id": "002B4AFC"
+	},
+	{
+		"name": "40MM XPL ammo",
+		"id": "002B5592"
+	},
+	{
+		"name": "43 Ultramag ammo",
+		"id": "002B5599"
+	},
+	{
+		"name": "6.5MM CT ammo",
+		"id": "002B5590"
+	},
+	{
+		"name": "6.5MM MI Array ammo",
+		"id": "002B558F"
+	},
+	{
+		"name": "7.5MM Whitehot ammo",
+		"id": "002B558E"
+	},
+	{
+		"name": "7.62x39MM ammo",
+		"id": "002B558D"
+	},
+	{
+		"name": "7.77MM Caseless ammo",
+		"id": "0004AD3E"
+	},
+	{
+		"name": "9x39MM ammo",
+		"id": "002B559B"
+	},
+	{
+		"name": "Caseless Shotgun Shell ammo",
+		"id": "002B4AFB"
+	},
+	{
+		"name": "Heavy Particle Fuse ammo",
+		"id": "002B558B"
+	},
+	{
+		"name": "Light Particle Fuse ammo",
+		"id": "002783C7"
+	}
+]

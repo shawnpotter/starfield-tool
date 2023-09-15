@@ -1,0 +1,118 @@
+[
+	{
+		"name": "Adaptive Frame",
+		"id": "00246B6A"
+	},
+	{
+		"name": "Austenitic Manifolds",
+		"id": "002155C2"
+	},
+	{
+		"name": "Comm Relay",
+		"id": "00246B64"
+	},
+	{
+		"name": "Control Rod",
+		"id": "00246B7B"
+	},
+	{
+		"name": "Drilling Rig",
+		"id": "0020A02F"
+	},
+	{
+		"name": "Indicite Wafer",
+		"id": "00203EB4"
+	},
+	{
+		"name": "Isocentered Magnet",
+		"id": "00246B77"
+	},
+	{
+		"name": "Isotopic Coolant",
+		"id": "00246B76"
+	},
+	{
+		"name": "Mag Pressure Tank",
+		"id": "00246B70"
+	},
+	{
+		"name": "Microsecond Regulator",
+		"id": "00246B5F"
+	},
+	{
+		"name": "Molecular Sieve",
+		"id": "00246B75"
+	},
+	{
+		"name": "Monopropellant",
+		"id": "00246B74"
+	},
+	{
+		"name": "Nuclear Fuel Rod",
+		"id": "00246B79"
+	},
+	{
+		"name": "Paramagon Conductor",
+		"id": "00246B73"
+	},
+	{
+		"name": "Polytextile",
+		"id": "00246B72"
+	},
+	{
+		"name": "Positron Battery",
+		"id": "00246B71"
+	},
+	{
+		"name": "Power Circuit",
+		"id": "00246B5C"
+	},
+	{
+		"name": "Reactive Gauge",
+		"id": "00246B6F"
+	},
+	{
+		"name": "Rothicite Magnet",
+		"id": "00203EB2"
+	},
+	{
+		"name": "Semimetal Wafer",
+		"id": "00246B6D"
+	},
+	{
+		"name": "Sterile Nanotubes",
+		"id": "00246B6C"
+	},
+	{
+		"name": "Structural",
+		"id": "000055B9"
+	},
+	{
+		"name": "Substrate Molecule Sieve",
+		"id": "00202782"
+	},
+	{
+		"name": "Supercooled Magnet",
+		"id": "00246B69"
+	},
+	{
+		"name": "Tasine Superconductor",
+		"id": "00203EAF"
+	},
+	{
+		"name": "Tau Grade Rheostat",
+		"id": "00246B68"
+	},
+	{
+		"name": "Vytinium Fuel Rod",
+		"id": "00203EB3"
+	},
+	{
+		"name": "Zero-G Gimbal",
+		"id": "00246B66"
+	},
+	{
+		"name": "Zero Wire",
+		"id": "00246B65"
+	}
+]

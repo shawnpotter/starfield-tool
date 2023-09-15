@@ -1,0 +1,122 @@
+[
+	{
+		"name": "Adhesive",
+		"id": "000055B1"
+	},
+	{
+		"name": "Amino Acids",
+		"id": "000055CD"
+	},
+	{
+		"name": "Analgesic",
+		"id": "000055A9"
+	},
+	{
+		"name": "Antimicrobial",
+		"id": "000055AB"
+	},
+	{
+		"name": "Aromatic",
+		"id": "000055B8"
+	},
+	{
+		"name": "Biosuppressant",
+		"id": "000055B2"
+	},
+	{
+		"name": "Cosmetic",
+		"id": "000055A8"
+	},
+	{
+		"name": "Fiber",
+		"id": "000055AF"
+	},
+	{
+		"name": "Gastronomic Delight",
+		"id": "000055B3"
+	},
+	{
+		"name": "High Tenside Spidroin",
+		"id": "000055AA"
+	},
+	{
+		"name": "Hallucinogen",
+		"id": "0029F405"
+	},
+	{
+		"name": "Hypercatalyst",
+		"id": "0029F40D"
+	},
+	{
+		"name": "Immunostimulant",
+		"id": "0000559E"
+	},
+	{
+		"name": "Lubricant",
+		"id": "000055BA"
+	},
+	{
+		"name": "Luxury Textile",
+		"id": "0000559B"
+	},
+	{
+		"name": "Membrane",
+		"id": "000055B0"
+	},
+	{
+		"name": "Metabolic Agent",
+		"id": "0029F3FC"
+	},
+	{
+		"name": "Neurologic",
+		"id": "000055AE"
+	},
+	{
+		"name": "Nutrient",
+		"id": "000777FD"
+	},
+	{
+		"name": "Ornamental Material",
+		"id": "000055A7"
+	},
+	{
+		"name": "Pigment",
+		"id": "0029F400"
+	},
+	{
+		"name": "Quark-Degenerate Tissues",
+		"id": "00122EB8"
+	},
+	{
+		"name": "Polymer",
+		"id": "000055A6"
+	},
+	{
+		"name": "Sealant",
+		"id": "000055CC"
+	},
+	{
+		"name": "Sedative",
+		"id": "000055AD"
+	},
+	{
+		"name": "Solvent",
+		"id": "000055CE"
+	},
+	{
+		"name": "Stimulant",
+		"id": "00202F5A"
+	},
+	{
+		"name": "Structural Material",
+		"id": "000055B9"
+	},
+	{
+		"name": "Spice",
+		"id": "000055AC"
+	},
+	{
+		"name": "Toxin",
+		"id": "000055CB"
+	}
+]

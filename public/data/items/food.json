@@ -1,0 +1,1098 @@
+[
+	{
+		"name": "Alien Broth",
+		"id": "0029B046"
+	},
+	{
+		"name": "Alien Energy Drink",
+		"id": "0029B047"
+	},
+	{
+		"name": "Alien Jerky",
+		"id": "002C7C0C"
+	},
+	{
+		"name": "Alien Kebabs",
+		"id": "0029B061"
+	},
+	{
+		"name": "Alien Liquor",
+		"id": "0029B04F"
+	},
+	{
+		"name": "Alien Pie",
+		"id": "0029B063"
+	},
+	{
+		"name": "Alien Sandwich",
+		"id": "0029B062"
+	},
+	{
+		"name": "Alien Scramble",
+		"id": "0029B065"
+	},
+	{
+		"name": "Alien Stew",
+		"id": "0029B066"
+	},
+	{
+		"name": "Alien Stir Fry",
+		"id": "0029B064"
+	},
+	{
+		"name": "Alien Tea",
+		"id": "0029B052"
+	},
+	{
+		"name": "Alien Tonic",
+		"id": "0029B048"
+	},
+	{
+		"name": "Astral Lounge Special Sangria",
+		"id": "00249C2C"
+	},
+	{
+		"name": "Astral Sliders",
+		"id": "00249C31"
+	},
+	{
+		"name": "Baguette",
+		"id": "002543B9"
+	},
+	{
+		"name": "Barbacoa Wrap",
+		"id": "0029B054"
+	},
+	{
+		"name": "Bart's Chili",
+		"id": "00249C46"
+	},
+	{
+		"name": "Bayu Private Reserve",
+		"id": "00249C2B"
+	},
+	{
+		"name": "Beer Brat Platter",
+		"id": "00249C22"
+	},
+	{
+		"name": "Beertini",
+		"id": "00249C0D"
+	},
+	{
+		"name": "Bitten Sandwich",
+		"id": "002543B7"
+	},
+	{
+		"name": "Boba Alien Tea",
+		"id": "0029B050"
+	},
+	{
+		"name": "Bog's Grog",
+		"id": "002C7210"
+	},
+	{
+		"name": "Boom Pop! Black Licorice",
+		"id": "002C71F8"
+	},
+	{
+		"name": "Boom Pop! Cherry",
+		"id": "0029A863"
+	},
+	{
+		"name": "Boom Pop! Cola",
+		"id": "002C71F5"
+	},
+	{
+		"name": "Boom Pop! Dynamite",
+		"id": "0029B040"
+	},
+	{
+		"name": "Boom Pop! Orange",
+		"id": "002C71F6"
+	},
+	{
+		"name": "Boom Pop! Reactor",
+		"id": "003038FE"
+	},
+	{
+		"name": "Boom Pop! Rhubarb",
+		"id": "002C71F7"
+	},
+	{
+		"name": "Boom Pop! Root Beer",
+		"id": "002C71F4"
+	},
+	{
+		"name": "Bourbon",
+		"id": "002C7211"
+	},
+	{
+		"name": "Bullet Coffee",
+		"id": "0029B04B"
+	},
+	{
+		"name": "Butter",
+		"id": "002C7C0A"
+	},
+	{
+		"name": "Cabernet Chunkignon",
+		"id": "00249C51"
+	},
+	{
+		"name": "Café et thé Prime",
+		"id": "0003D3A8"
+	},
+	{
+		"name": "CAN-uck! Bacon",
+		"id": "002C722D"
+	},
+	{
+		"name": "CAN-uck! Double Double",
+		"id": "00249C49"
+	},
+	{
+		"name": "CAN-uck! Edmontonian",
+		"id": "00249C4A"
+	},
+	{
+		"name": "CAN-uck! Haligonian",
+		"id": "00249C4D"
+	},
+	{
+		"name": "CAN-uck! Ham Boys",
+		"id": "00249C4C"
+	},
+	{
+		"name": "CAN-uck! Maple Cola",
+		"id": "00249C48"
+	},
+	{
+		"name": "CAN-uck! Pancakes Plus",
+		"id": "002C7230"
+	},
+	{
+		"name": "CAN-uck! Pilsner",
+		"id": "002C720D"
+	},
+	{
+		"name": "CAN-uck! Poutine",
+		"id": "002C7231"
+	},
+	{
+		"name": "CAN-uck! Shepherd's Pie",
+		"id": "00249C4B"
+	},
+	{
+		"name": "CAN-uck! Tourtiere",
+		"id": "002C7232"
+	},
+	{
+		"name": "Carrot",
+		"id": "00092B98"
+	},
+	{
+		"name": "Celery",
+		"id": "00092B99"
+	},
+	{
+		"name": "Chai Latte",
+		"id": "0029B03E"
+	},
+	{
+		"name": "Chandra Cabernet Sauvignon",
+		"id": "002C7202"
+	},
+	{
+		"name": "Chandra Chardonnay",
+		"id": "002C7204"
+	},
+	{
+		"name": "Chandra Malbec",
+		"id": "002C7203"
+	},
+	{
+		"name": "Chandra Merlot",
+		"id": "002C7208"
+	},
+	{
+		"name": "Chandra Pinot Noir",
+		"id": "002C7206"
+	},
+	{
+		"name": "Chandra Port",
+		"id": "002C7209"
+	},
+	{
+		"name": "Chandra Riesling",
+		"id": "002C7205"
+	},
+	{
+		"name": "Chandra Sauvignon Blanc",
+		"id": "002C7207"
+	},
+	{
+		"name": "Chapaguri",
+		"id": "002C7C0D"
+	},
+	{
+		"name": "Cheddar Snack Crackers",
+		"id": "002C7236"
+	},
+	{
+		"name": "Cheese",
+		"id": "001FC9C1"
+	},
+	{
+		"name": "Chicken Marsala",
+		"id": "0029B05C"
+	},
+	{
+		"name": "Chicken Tikka",
+		"id": "0029B05A"
+	},
+	{
+		"name": "Chimera",
+		"id": "00249C28"
+	},
+	{
+		"name": "Chocolate Labs",
+		"id": "002C723B"
+	},
+	{
+		"name": "Chunks Apple",
+		"id": "00206770"
+	},
+	{
+		"name": "Chunks Apple - Packaged",
+		"id": "00206771"
+	},
+	{
+		"name": "Chunks Beef",
+		"id": "00206763"
+	},
+	{
+		"name": "Chunks Beef - Packaged",
+		"id": "0020676F"
+	},
+	{
+		"name": "Chunks Cake",
+		"id": "0020676D"
+	},
+	{
+		"name": "Chunks Cake - Packaged",
+		"id": "0020676E"
+	},
+	{
+		"name": "Chunks Cheesesteak",
+		"id": "0020676B"
+	},
+	{
+		"name": "Chunks Cheesesteak - Packaged",
+		"id": "0020676C"
+	},
+	{
+		"name": "Chunks Chick - Packaged",
+		"id": "0020676A"
+	},
+	{
+		"name": "Chunks Chicken",
+		"id": "00206764"
+	},
+	{
+		"name": "Chunks Choco",
+		"id": "00206769"
+	},
+	{
+		"name": "Chunks Choco - Packaged",
+		"id": "00206768"
+	},
+	{
+		"name": "Chunks Cola",
+		"id": "00249C52"
+	},
+	{
+		"name": "Chunks Cola - Packaged",
+		"id": "00206767"
+	},
+	{
+		"name": "Chunks Egg",
+		"id": "00206765"
+	},
+	{
+		"name": "Chunks Egg - Packaged",
+		"id": "001E29A8"
+	},
+	{
+		"name": "Chunks Pie",
+		"id": "0020675F"
+	},
+	{
+		"name": "Chunks Pie - Packaged",
+		"id": "00206760"
+	},
+	{
+		"name": "Chunks Potato",
+		"id": "00206761"
+	},
+	{
+		"name": "Chunks Potato - Packaged",
+		"id": "00206762"
+	},
+	{
+		"name": "Chunks Wine",
+		"id": "0020675D"
+	},
+	{
+		"name": "Chunks Wine - Packaged",
+		"id": "0020675E"
+	},
+	{
+		"name": "Codos Crater",
+		"id": "00249C1A"
+	},
+	{
+		"name": "Coffee Bag",
+		"id": "0025B0FB"
+	},
+	{
+		"name": "Colonel's Choice",
+		"id": "0029B04E"
+	},
+	{
+		"name": "Container of Cereal",
+		"id": "00287D76"
+	},
+	{
+		"name": "Crawler Bisque",
+		"id": "00249C32"
+	},
+	{
+		"name": "Creature Jam",
+		"id": "0029B05E"
+	},
+	{
+		"name": "Crispy Alien Nuggets",
+		"id": "0029B060"
+	},
+	{
+		"name": "Dal Makhani",
+		"id": "0029B056"
+	},
+	{
+		"name": "Dark Lager",
+		"id": "00139E45"
+	},
+	{
+		"name": "Dawn's Roost Strip",
+		"id": "00249C30"
+	},
+	{
+		"name": "Departure Time",
+		"id": "00249C0F"
+	},
+	{
+		"name": "Disastrous Shipwreck",
+		"id": "0029B042"
+	},
+	{
+		"name": "Distilled Water",
+		"id": "0029B053"
+	},
+	{
+		"name": "Doro Wat",
+		"id": "0029B059"
+	},
+	{
+		"name": "Drink Pack: Beer",
+		"id": "002C7217"
+	},
+	{
+		"name": "Drink Pack: Milk",
+		"id": "002C7216"
+	},
+	{
+		"name": "Drink Pack: Orange Juice",
+		"id": "002C721A"
+	},
+	{
+		"name": "Drink Pack: Red Wine",
+		"id": "002C7215"
+	},
+	{
+		"name": "Drink Pack: Vodka",
+		"id": "0029B00E"
+	},
+	{
+		"name": "Drink Pack: Water",
+		"id": "002C7218"
+	},
+	{
+		"name": "Drink Pack: Whiskey",
+		"id": "002C7219"
+	},
+	{
+		"name": "Drink Pack: White Wine",
+		"id": "002C7214"
+	},
+	{
+		"name": "Erdebrau Dark Can",
+		"id": "001FF69C"
+	},
+	{
+		"name": "Erdebrau Lager Can",
+		"id": "001FF69E"
+	},
+	{
+		"name": "Erdebrau Pils Can",
+		"id": "001FF69A"
+	},
+	{
+		"name": "Erdebraw Light Can",
+		"id": "001FF6A0"
+	},
+	{
+		"name": "Fried Pickles",
+		"id": "00249C20"
+	},
+	{
+		"name": "Fullfood Spiced Worms",
+		"id": "000304CE"
+	},
+	{
+		"name": "Fully-Loaded Bloody Mary",
+		"id": "0029B03F"
+	},
+	{
+		"name": "Galaxy Lo Mein",
+		"id": "00122E94"
+	},
+	{
+		"name": "Gazpacho",
+		"id": "00249C33"
+	},
+	{
+		"name": "Grandpa's Meatloaf",
+		"id": "00165073"
+	},
+	{
+		"name": "Granola Mix",
+		"id": "002C7235"
+	},
+	{
+		"name": "Grapes",
+		"id": "00092B9A"
+	},
+	{
+		"name": "Grilled Cheese Sandwich",
+		"id": "0029B05D"
+	},
+	{
+		"name": "Ham and Cheese Sandwich",
+		"id": "002C722B"
+	},
+	{
+		"name": "High Gravity Reserve",
+		"id": "0037CEF7"
+	},
+	{
+		"name": "Instant Oatmeal",
+		"id": "002C7234"
+	},
+	{
+		"name": "Jake's Stout",
+		"id": "00249C0E"
+	},
+	{
+		"name": "Jemison Wellington",
+		"id": "00249C35"
+	},
+	{
+		"name": "Kefir",
+		"id": "002C7213"
+	},
+	{
+		"name": "Kiffles",
+		"id": "00249C14"
+	},
+	{
+		"name": "Latkes",
+		"id": "002382E9"
+	},
+	{
+		"name": "Lemon",
+		"id": "004B1D8"
+	},
+	{
+		"name": "Lettuce",
+		"id": "00092B9B"
+	},
+	{
+		"name": "Lime",
+		"id": "0004B1D7"
+	},
+	{
+		"name": "Liver Pate",
+		"id": "00249C36"
+	},
+	{
+		"name": "Lounge Special",
+		"id": "00249C2D"
+	},
+	{
+		"name": "Lumberjack Julep",
+		"id": "0029B04D"
+	},
+	{
+		"name": "Marshmallow Treat Cereal",
+		"id": "002C7238"
+	},
+	{
+		"name": "Meal Kit",
+		"id": "00191214"
+	},
+	{
+		"name": "Meal Pack - Cereal",
+		"id": "002C7221"
+	},
+	{
+		"name": "Meal Pack - Chicken",
+		"id": "002C721C"
+	},
+	{
+		"name": "Meal Pack - Ramen",
+		"id": "002C721F"
+	},
+	{
+		"name": "Meal Pack - Shrimp",
+		"id": "002C721D"
+	},
+	{
+		"name": "Meal Pack - Sushi",
+		"id": "002C7220"
+	},
+	{
+		"name": "Meal Pack - Tofu",
+		"id": "002C721E"
+	},
+	{
+		"name": "Meal Packs - Eggs",
+		"id": "002C7222"
+	},
+	{
+		"name": "Meal Tray",
+		"id": "00240220"
+	},
+	{
+		"name": "Meatloaf",
+		"id": "0029B05B"
+	},
+	{
+		"name": "Melon Caviar",
+		"id": "00249C2E"
+	},
+	{
+		"name": "Midnight Delight",
+		"id": "002C722C"
+	},
+	{
+		"name": "Midnight Special",
+		"id": "00249C44"
+	},
+	{
+		"name": "Milk",
+		"id": "0019121F"
+	},
+	{
+		"name": "Miso Soup",
+		"id": "001EE5C5"
+	},
+	{
+		"name": "Miso Soup Minislurp",
+		"id": "001EE5C4"
+	},
+	{
+		"name": "Miso Soup Multipack",
+		"id": "001EE5C7"
+	},
+	{
+		"name": "Mochi",
+		"id": "001EDDDF"
+	},
+	{
+		"name": "Mochi Minibite",
+		"id": "001EDDDE"
+	},
+	{
+		"name": "Mochi Multipack",
+		"id": "001EDDE0"
+	},
+	{
+		"name": "Nebula Wat",
+		"id": "00122E96"
+	},
+	{
+		"name": "New Arrival",
+		"id": "00249C11"
+	},
+	{
+		"name": "Onion",
+		"id": "00003A1F"
+	},
+	{
+		"name": "Opened Superfood Paste Kit",
+		"id": "001DFCB5"
+	},
+	{
+		"name": "Orange",
+		"id": "00003A22"
+	},
+	{
+		"name": "Orange Juice of Transcendence",
+		"id": "002DFB0B"
+	},
+	{
+		"name": "Pale Ale",
+		"id": "00139E44"
+	},
+	{
+		"name": "Panache",
+		"id": "00249C38"
+	},
+	{
+		"name": "Pappardelle Bolognese",
+		"id": "0029B057"
+	},
+	{
+		"name": "Patty Melt",
+		"id": "00249C21"
+	},
+	{
+		"name": "Peach",
+		"id": "00003A23"
+	},
+	{
+		"name": "Pear",
+		"id": "00003A21"
+	},
+	{
+		"name": "Pepper Steak Sandwich",
+		"id": "001944E4"
+	},
+	{
+		"name": "Pierogis",
+		"id": "00249C13"
+	},
+	{
+		"name": "Pizza Square",
+		"id": "002C7233"
+	},
+	{
+		"name": "Plum",
+		"id": "00003A27"
+	},
+	{
+		"name": "Potato",
+		"id": "00003A26"
+	},
+	{
+		"name": "Poultry",
+		"id": "0029B039"
+	},
+	{
+		"name": "Raisin Bran Cereal",
+		"id": "002C7237"
+	},
+	{
+		"name": "Ramen",
+		"id": "001EE441"
+	},
+	{
+		"name": "Ramen Minibite",
+		"id": "001EE442"
+	},
+	{
+		"name": "Ramen Multipack",
+		"id": "001EE440"
+	},
+	{
+		"name": "Red Ale",
+		"id": "00139E43"
+	},
+	{
+		"name": "Red Harvest Amber Ale",
+		"id": "0001BBAB"
+	},
+	{
+		"name": "Red Harvest Double Malt Whiskey",
+		"id": "0003614B"
+	},
+	{
+		"name": "Red Harvest Lentils",
+		"id": "002C7241"
+	},
+	{
+		"name": "Red Harvest Milk Stout",
+		"id": "0001BBAC"
+	},
+	{
+		"name": "Red Harvest Naan",
+		"id": "002C723F"
+	},
+	{
+		"name": "Red Harvest Pale Ale",
+		"id": "0001BBAA"
+	},
+	{
+		"name": "Red Harvest Rice",
+		"id": "0029B013"
+	},
+	{
+		"name": "Red Harvest Rye",
+		"id": "002C723C"
+	},
+	{
+		"name": "Red Harvest Single Malt Whiskey",
+		"id": "0003614C"
+	},
+	{
+		"name": "Red Harvest Spaghetti",
+		"id": "002C7240"
+	},
+	{
+		"name": "Red Harvest Wheat",
+		"id": "002C723D"
+	},
+	{
+		"name": "Red Harvest White Bread",
+		"id": "002C723E"
+	},
+	{
+		"name": "Red Meat",
+		"id": "0029B03B"
+	},
+	{
+		"name": "Ruben",
+		"id": "0029B055"
+	},
+	{
+		"name": "Runaway Whiskey",
+		"id": "0016EC2D"
+	},
+	{
+		"name": "Seaweed Minibite",
+		"id": "002C724D"
+	},
+	{
+		"name": "Seaweed Snacks Multipack",
+		"id": "0030283B"
+	},
+	{
+		"name": "Seaweed Snacks",
+		"id": "0030283C"
+	},
+	{
+		"name": "Ships O' the Line Cereal",
+		"id": "002C7239"
+	},
+	{
+		"name": "Smoked Salmon Filet",
+		"id": "0029A860"
+	},
+	{
+		"name": "Snack Pack - Apple Bites",
+		"id": "002C7223"
+	},
+	{
+		"name": "Snack Pack - Choco Bites",
+		"id": "002C7225"
+	},
+	{
+		"name": "Snack Pack - Gummy Bugs",
+		"id": "002C7226"
+	},
+	{
+		"name": "Snack Pack - Protein Bar",
+		"id": "002C7224"
+	},
+	{
+		"name": "Soba",
+		"id": "001EDDE5"
+	},
+	{
+		"name": "Soba Minibite",
+		"id": "001EDDE4"
+	},
+	{
+		"name": "Soba Multipack",
+		"id": "001EDDE6"
+	},
+	{
+		"name": "Solomons Reserve",
+		"id": "00249C1B"
+	},
+	{
+		"name": "Spaghetti Carbonara",
+		"id": "0029B958"
+	},
+	{
+		"name": "Sparkling Water",
+		"id": "000304CC"
+	},
+	{
+		"name": "Sparkling Wine",
+		"id": "001DFCB4"
+	},
+	{
+		"name": "Star Cluster Marsala",
+		"id": "00122E95"
+	},
+	{
+		"name": "Stellar Kebabs",
+		"id": "00122E98"
+	},
+	{
+		"name": "Sunray Tonic",
+		"id": "0029B04C"
+	},
+	{
+		"name": "Superfood Paste Kit",
+		"id": "001DFCB2"
+	},
+	{
+		"name": "Superfood Paste Set",
+		"id": "001DFCB3"
+	},
+	{
+		"name": "Supermassive Black Heart",
+		"id": "0029959D"
+	},
+	{
+		"name": "Sushi Rolls",
+		"id": "001DFCAA"
+	},
+	{
+		"name": "Sushi Rolls Minibite",
+		"id": "001DFCAB"
+	},
+	{
+		"name": "Sushi Rolls Multipack",
+		"id": "001DFCAC"
+	},
+	{
+		"name": "Sweet Rolls",
+		"id": "00137524"
+	},
+	{
+		"name": "Synthameat Chicken",
+		"id": "002C7242"
+	},
+	{
+		"name": "Synthameat Ham",
+		"id": "002C7246"
+	},
+	{
+		"name": "Synthameat Hamburger",
+		"id": "002C7243"
+	},
+	{
+		"name": "Synthameat Multi",
+		"id": "000304D0"
+	},
+	{
+		"name": "Synthameat Steak",
+		"id": "002C7244"
+	},
+	{
+		"name": "Synthameat Turkey",
+		"id": "0029A861"
+	},
+	{
+		"name": "Synthameat Veal",
+		"id": "002C7245"
+	},
+	{
+		"name": "Ta'Ameya Pita",
+		"id": "00249C15"
+	},
+	{
+		"name": "TerraBrew Cappuccino",
+		"id": "00249C4E"
+	},
+	{
+		"name": "TerraBrew Classic",
+		"id": "00249C50"
+	},
+	{
+		"name": "TerraBrew Cortado",
+		"id": "003E3407"
+	},
+	{
+		"name": "TerraBrew Espresso",
+		"id": "0029A894"
+	},
+	{
+		"name": "TerraBrew Latte",
+		"id": "00249C4F"
+	},
+	{
+		"name": "TerraBrew Macchiato",
+		"id": "003E3408"
+	},
+	{
+		"name": "The Deep",
+		"id": "00249C3C"
+	},
+	{
+		"name": "The Rack",
+		"id": "001F36F2"
+	},
+	{
+		"name": "The Strip",
+		"id": "00249C3D"
+	},
+	{
+		"name": "The Top Shelf",
+		"id": "00249C3A"
+	},
+	{
+		"name": "Toast",
+		"id": "001DFCAE"
+	},
+	{
+		"name": "Tomato",
+		"id": "00092B96"
+	},
+	{
+		"name": "Tranquilitea Breakfast",
+		"id": "0010FA0A"
+	},
+	{
+		"name": "Tranquilitea Chamomile",
+		"id": "0009F549"
+	},
+	{
+		"name": "Tranquilitea Classic",
+		"id": "00002449"
+	},
+	{
+		"name": "Tranquilitea Dynastic",
+		"id": "0010FA08"
+	},
+	{
+		"name": "Tranquilitea Earl Gray",
+		"id": "0010FA09"
+	},
+	{
+		"name": "Tranquilitea Lemon",
+		"id": "0010FA0C"
+	},
+	{
+		"name": "Tranquilitea Lotus",
+		"id": "0010FA0F"
+	},
+	{
+		"name": "Tranquilitea Sleepy Pack",
+		"id": "003B7115"
+	},
+	{
+		"name": "Tranquilitea Sunray",
+		"id": "003B7117"
+	},
+	{
+		"name": "Trawl",
+		"id": "00249C3F"
+	},
+	{
+		"name": "Trilo Bites",
+		"id": "00249C37"
+	},
+	{
+		"name": "UC Battlemeal",
+		"id": "0029A893"
+	},
+	{
+		"name": "UC Battlemeal Multipack",
+		"id": "0030283E"
+	},
+	{
+		"name": "Udon",
+		"id": "001EDF0F"
+	},
+	{
+		"name": "Udon Minibite",
+		"id": "001EDF10"
+	},
+	{
+		"name": "Udon Multipack",
+		"id": "001EDF11"
+	},
+	{
+		"name": "Veggie Grinder",
+		"id": "00249C1F"
+	},
+	{
+		"name": "Velocity Blue",
+		"id": "003BF793"
+	},
+	{
+		"name": "Velocity Green",
+		"id": "003BF792"
+	},
+	{
+		"name": "Velocity Orange",
+		"id": "00249C26"
+	},
+	{
+		"name": "Velocity Red",
+		"id": "00249C27"
+	},
+	{
+		"name": "Velocity Violet",
+		"id": "00249C25"
+	},
+	{
+		"name": "Velocity Yellow",
+		"id": "001EBE9E"
+	},
+	{
+		"name": "Very Heavy Water",
+		"id": "0029B041"
+	},
+	{
+		"name": "Viewport Original",
+		"id": "00240C10"
+	},
+	{
+		"name": "Water",
+		"id": "00005591"
+	},
+	{
+		"name": "Watermelon",
+		"id": "00092B97"
+	},
+	{
+		"name": "Xenofresh Paella",
+		"id": "00249C42"
+	},
+	{
+		"name": "Xenowurst",
+		"id": "0029B05F"
+	},
+	{
+		"name": "Xenoyaki",
+		"id": "00249C40"
+	},
+	{
+		"name": "Yellow Giant Splash",
+		"id": "0029B051"
+	},
+	{
+		"name": "Yogurt",
+		"id": "002C7C09"
+	},
+	{
+		"name": "Yuko's Coffee",
+		"id": "0014098A"
+	}
+]
