@@ -31,7 +31,7 @@ const Table: React.FC<TableProps> = ({ tableData, tableName }) => {
 		<div
 			data-testid='table-component'
 			id='table-component'
-			className='flex justify-center flex-col h-screen'
+			className='flex flex-col max-h-screen'
 		>
 			<h1 className='text-center text-2xl capitalize font-semibold'>
 				{tableName}

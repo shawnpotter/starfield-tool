@@ -32,7 +32,7 @@ export default function Items() {
 	}, [selectedTable])
 
 	return (
-		<main className='flex justify-center w-[95%] h-screen'>
+		<main className='flex justify-center w-[95%] h-full'>
 			<div className='flex w-full'>
 				<div className='w-[20%]'>
 					<Toolbar onTableChange={handleTableChange} />
