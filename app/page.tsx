@@ -24,8 +24,8 @@ export default function Home() {
 					<span className='ml-5 font-normal'>9/17/2023:</span>
 					<span className='ml-5 font-normal'>
 						Item ID tables are mostly finished. I haven&apos;t included weapons
-						yet because I have figured out how to properly work with the tiered
-						weapons in the console yet. I will be adding them soon.
+						yet because I have not figured out how to properly work with the
+						tiered weapons in the console yet. I will be adding them soon.
 					</span>
 					<span className='ml-5 font-normal mt-4'>
 						I will be introducing new tools soon. Outpost building and Weapon
