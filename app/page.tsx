@@ -6,7 +6,7 @@ export default function Home() {
 	const btn =
 		'text-center bg-zinc-400/50 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base hover:bg-zinc-700/75 cursor-pointer'
 	return (
-		<main className='flex flex-col h-full w-full items-center bg-zinc-900/50'>
+		<main className='flex flex-col h-full w-full items-center'>
 			<h1 className='w-full text-2xl font-black uppercase text-center my-10'>
 				Starfield Tools
 			</h1>
@@ -18,7 +18,7 @@ export default function Home() {
 					<div className={btn}>Coming Soon...</div>
 				</div>
 			</div>
-			<div className='flex flex-col justify-start w-1/2 px-10 pt-[15rem] font-semibold text-lg'>
+			<div className='flex flex-col justify-start w-1/2 px-10 pt-[12rem] font-semibold text-lg'>
 				<h1>Updates</h1>
 				<div className='flex flex-col border rounded p-4'>
 					<span className='ml-5 font-normal'>9/17/2023:</span>
