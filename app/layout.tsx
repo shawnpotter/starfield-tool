@@ -20,9 +20,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${barlow.className} min-h-screen`}>
-				<Navbar />
-				{children}
+			<body className={`${barlow.className} bg-topo-dark`}>
+				<div className='bg-zinc-900/50 flex flex-col min-h-screen'>
+					<Navbar />
+					<div className='flex-1'>{children}</div>
+				</div>
 			</body>
 		</html>
 	)
