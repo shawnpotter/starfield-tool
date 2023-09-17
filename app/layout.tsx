@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${barlow.className} min-h-screen`}>
+			<body className={`${barlow.className} h-screen bg-topo-dark`}>
 				<Navbar />
 				{children}
 			</body>
