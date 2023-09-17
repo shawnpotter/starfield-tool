@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 interface ToolbarProps {
 	onTableChange: (newTable: string) => void
 }
@@ -10,54 +12,73 @@ export default function Toolbar(props: ToolbarProps) {
 		props.onTableChange(newTable)
 	}
 
+	// State to manage the visibility of the mobile menu
+	const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
+
 	const btn =
-		'text-center py-3 border-[3px] border-blue-900 rounded-lg bg-blue-700 hover:bg-blue-500 w-full disabled:opacity-50 focus:bg-green-700'
+		'text-center bg-zinc-400/50 font-semibold shadow self-center border py-3 md:w-[8rem] lg:w-[10rem] xl:w-[14rem] md:text-sm lg:text-base  hover:bg-zinc-700/75 cursor-pointer'
 	return (
-		<div>
-			<h1 className='text-center'>Item ID Tables</h1>
-			<button
-				onClick={() => handleButtonClick('inorganic')}
-				className={btn}
+		<div className='my-2'>
+			<h1 className='text-center mb-1 font-semibold'>Item ID Tables</h1>
+
+			{/* Mobile menu toggle button */}
+			<div className='flex justify-center'>
+				<button
+					className='block py-2 w-full rounded bg-green-700 md:hidden text-white'
+					onClick={() => setMobileMenuVisible(!mobileMenuVisible)}
+				>
+					{mobileMenuVisible ? 'Close Tables List' : 'Show Tables List'}
+				</button>
+			</div>
+
+			<ul
+				className={`md:flex justify-around ${
+					mobileMenuVisible ? 'block' : 'hidden'
+				}`}
 			>
-				Inorganic
-			</button>
-			<button
-				onClick={() => handleButtonClick('organic')}
-				className={btn}
-			>
-				Organic
-			</button>
-			<button
-				onClick={() => handleButtonClick('manufactured')}
-				className={btn}
-			>
-				Manufactured
-			</button>
-			<button
-				onClick={() => handleButtonClick('food')}
-				className={btn}
-			>
-				Food
-			</button>
-			<button
-				onClick={() => handleButtonClick('weapons')}
-				className={btn}
-				disabled
-			>
-				Weapons
-			</button>
-			<button
-				onClick={() => handleButtonClick('ammo')}
-				className={btn}
-			>
-				Ammo
-			</button>
-			<button
-				onClick={() => handleButtonClick('misc')}
-				className={btn}
-			>
-				Misc
-			</button>
+				<li
+					onClick={() => handleButtonClick('inorganic')}
+					className={btn}
+				>
+					Inorganic
+				</li>
+				<li
+					onClick={() => handleButtonClick('organic')}
+					className={btn}
+				>
+					Organic
+				</li>
+				<li
+					onClick={() => handleButtonClick('manufactured')}
+					className={btn}
+				>
+					Manufactured
+				</li>
+				<li
+					onClick={() => handleButtonClick('food')}
+					className={btn}
+				>
+					Food
+				</li>
+				{/* <li
+					onClick={() => handleButtonClick('weapons')}
+					className={btn}
+				>
+					Weapons
+				</li> */}
+				<li
+					onClick={() => handleButtonClick('ammo')}
+					className={btn}
+				>
+					Ammo
+				</li>
+				<li
+					onClick={() => handleButtonClick('misc')}
+					className={btn}
+				>
+					Misc
+				</li>
+			</ul>
 		</div>
 	)
 }
