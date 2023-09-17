@@ -4,11 +4,9 @@ import { Item } from '../../items/page'
 
 interface TableProps {
 	tableData: Item[]
-	tableName: string
 }
 
-const Table: React.FC<TableProps> = ({ tableData, tableName }) => {
-	console.log('tableName: ', tableName)
+const Table: React.FC<TableProps> = ({ tableData }) => {
 	//onclick that copies the item id to clipboard
 
 	// If tableData is empty, return a message
@@ -29,15 +27,11 @@ const Table: React.FC<TableProps> = ({ tableData, tableName }) => {
 
 	return (
 		<div
-			data-testid='table-component'
 			id='table-component'
-			className='flex flex-col max-h-screen'
+			className='flex flex-col h-full'
 		>
-			<h1 className='text-center text-2xl capitalize font-semibold'>
-				{tableName}
-			</h1>
-			<div className='max-h-screen overflow-scroll overflow-x-hidden'>
-				<table className='text-lg'>
+			<div className='h-full overflow-x-hidden'>
+				<table className='text-lg display'>
 					<thead className='sticky top-0'>
 						<tr>
 							<th>Item Name</th>
@@ -48,7 +42,9 @@ const Table: React.FC<TableProps> = ({ tableData, tableName }) => {
 						{tableData.map((item, index) => (
 							<tr
 								key={item.id}
-								className={index % 2 === 0 ? 'bg-black' : 'bg-slate-800'}
+								className={
+									index % 2 === 0 ? 'bg-zinc-600/75' : 'bg-zinc-800/75'
+								}
 								onClick={() => handleRowClick(item.id)}
 								style={{ cursor: 'pointer' }}
 							>

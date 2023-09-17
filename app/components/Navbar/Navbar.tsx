@@ -3,9 +3,17 @@ import React from 'react'
 
 export default function Navbar() {
 	return (
-		<nav className='h-[50px] w-full bg-slate-800 mb-2'>
-			<div className='flex justify-end items-center'>
-				<ul className='flex flex-row justify-between p-2 gap-5'>
+		<nav className='flex justify-between w-full bg-zinc-800/75 px-10 h-14 items-center'>
+			<div className=''>
+				<span>
+					<strong className='text-lg uppercase'>Starfield Tools</strong>{' '}
+					<em>
+						<small>by @Spotter_Dev</small>
+					</em>
+				</span>
+			</div>
+			<div>
+				<ul className='flex flex-row gap-4'>
 					<li>
 						<Link href='/'>Home</Link>
 					</li>
