@@ -15,7 +15,9 @@ export default function Home() {
 					<Link href='/items'>
 						<div className={btn}>Item IDs</div>
 					</Link>
-					<div className={btn}>Coming Soon...</div>
+					<div className='text-center bg-zinc-400/25 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base'>
+						Coming Soon...
+					</div>
 				</div>
 			</div>
 			<div className='flex flex-col justify-start w-1/2 px-10 pt-[12rem] font-semibold text-lg'>
