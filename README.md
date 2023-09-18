@@ -36,4 +36,4 @@ This project, including any tools, resources, or content provided herein, is not
 
 "Starfield" is a registered trademark and the intellectual property of Bethesda Softworks. Any use of the "Starfield" name, logos, or related materials is done in accordance with fair use and for non-commercial, fan-based purposes.
 
-This project respects the intellectual property rights of Bethesda Softworks, and we encourage all users to support the official "Starfield" products and abide by Bethesda Softworks' terms of use and copyright policies.
+This project respects the intellectual property rights of Bethesda Softworks, and I encourage all users to support the official "Starfield" products and abide by Bethesda Softworks' terms of use and copyright policies.
