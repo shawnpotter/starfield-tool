@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Starfield Tools
 
-## Getting Started
+Welcome to the Starfield Tools repository! This project provides a collection of tools and resources for enhancing your gaming experience in Starfield.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Introduction](#introduction)
+- [Features](#features)
+- [Contributing](#contributing)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Starfield, by Bethesda Softworks, is a game that takes you on interstellar adventures. This repository aims to enhance your gaming experience by providing a set of tools and utilities to help you master the game.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- **Item IDs:** This page contains tables full of items and their respective IDs that you can spawn in the Console.
+- **Outpost Calculator (Work In Progress):** Will give you a list of all the materials you need to build the items you want for your outpost as well as help you plan out production calculations.
+- **Weapon Calculator (Work In Progress):** Will allow you to mock up weapons and swap out modifications to see what type of stats you can get without having to spend the time, money, or resources to do so in-game.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Please Note:** At the moment, this repository is not open for direct contributions or pull requests. However, your input, feedback, and issue reports are highly valued and appreciated!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### How You Can Contribute
 
-## Deploy on Vercel
+- **Feedback:** If you have suggestions, ideas, or general feedback regarding the tools or features in this repository, please feel free to [create an issue](https://github.com/ShawnPotter/starfield-tool/issues) to share your thoughts. I'm eager to hear from you and improve the project based on your input.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Report Issues:** If you encounter any bugs, glitches, or unexpected behavior while using our tools, don't hesitate to [report an issue](https://github.com/ShawnPotter/starfield-tool/issues). Detailed bug reports help me identify and resolve issues more effectively.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+While I'm not accepting direct code contributions right now, your engagement and feedback play a crucial role in shaping the future of this project. Thank you for your understanding and support!
+
+## Legal Disclaimer
+
+This project, including any tools, resources, or content provided herein, is not affiliated with, endorsed, or sponsored by Bethesda Softworks, the creator and owner of the intellectual property known as "Starfield." All references to "Starfield" are used for descriptive and informational purposes only.
+
+"Starfield" is a registered trademark and the intellectual property of Bethesda Softworks. Any use of the "Starfield" name, logos, or related materials is done in accordance with fair use and for non-commercial, fan-based purposes.
+
+This project respects the intellectual property rights of Bethesda Softworks, and I encourage all users to support the official "Starfield" products and abide by Bethesda Softworks' terms of use and copyright policies.
