@@ -32,7 +32,7 @@ export default function Items() {
 	}, [selectedTable])
 
 	return (
-		<main className='flex flex-col'>
+		<main className={`item-tables flex flex-col`}>
 			<div>
 				<Toolbar onTableChange={handleTableChange} />
 			</div>
