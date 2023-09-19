@@ -6,7 +6,7 @@
 	body {
 		@apply text-white;
 	}
-	table {
+	/* 	table {
 		@apply border-separate border-spacing-2 border-neutral-500 w-full table-auto;
 	}
 	thead {
@@ -18,5 +18,8 @@
 	}
 	tr {
 		@apply hover:bg-green-700;
+	} */
+	option {
+		@apply bg-black;
 	}
 }
