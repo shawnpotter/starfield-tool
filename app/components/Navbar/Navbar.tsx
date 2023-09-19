@@ -20,6 +20,9 @@ export default function Navbar() {
 					<li>
 						<Link href='/items'>Item IDs</Link>
 					</li>
+					<li>
+						<Link href='/outpost-calculator'>Outpost Calculator</Link>
+					</li>
 				</ul>
 			</div>
 		</nav>
