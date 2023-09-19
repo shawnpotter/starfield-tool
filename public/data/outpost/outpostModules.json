@@ -1,0 +1,50 @@
+[
+	{
+		"id": "oreExtractor",
+		"name": "Ore Extractor",
+		"materialCosts": [
+			{
+				"material": "aluminum",
+				"quantity": 4
+			},
+			{
+				"material": "iron",
+				"quantity": 5
+			},
+			{
+				"material": "tungsten",
+				"quantity": 2
+			}
+		],
+		"production": {
+			"power": 0
+		},
+		"powerCost": {
+			"power": 5
+		}
+	},
+	{
+		"id": "solarArray",
+		"name": "Solar Array",
+		"materialCosts": [
+			{
+				"material": "beryllium",
+				"quantity": 2
+			},
+			{
+				"material": "copper",
+				"quantity": 3
+			},
+			{
+				"material": "aluminum",
+				"quantity": 4
+			}
+		],
+		"production": {
+			"power": 6
+		},
+		"powerCost": {
+			"power": 0
+		}
+	}
+]
