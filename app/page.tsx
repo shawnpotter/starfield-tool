@@ -15,6 +15,9 @@ export default function Home() {
 					<Link href='/items'>
 						<div className={btn}>Item IDs</div>
 					</Link>
+					<Link href='/outpost-calculator'>
+						<div className={btn}>Outpost Calculator</div>
+					</Link>
 					<div className='text-center bg-zinc-400/25 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base'>
 						Coming Soon...
 					</div>
