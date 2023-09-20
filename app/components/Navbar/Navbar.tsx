@@ -5,12 +5,14 @@ export default function Navbar() {
 	return (
 		<nav className='flex justify-between w-full bg-zinc-800/75 px-10 h-14 items-center'>
 			<div className=''>
-				<span>
-					<strong className='text-lg uppercase'>Starfield Tools</strong>{' '}
-					<em>
-						<small>by @Spotter_Dev</small>
-					</em>
-				</span>
+				<Link href='/'>
+					<span>
+						<strong className='text-lg uppercase'>Starfield Tools</strong>{' '}
+						<em>
+							<small>by @Spotter_Dev</small>
+						</em>
+					</span>
+				</Link>
 			</div>
 			<div>
 				<ul className='flex flex-row gap-4'>
