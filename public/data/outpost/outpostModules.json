@@ -1,50 +1,492 @@
-[
-	{
-		"id": "oreExtractor",
-		"name": "Ore Extractor",
-		"materialCosts": [
-			{
-				"material": "aluminum",
-				"quantity": 4
+{
+	"Extractors": [
+		{
+			"id": "oreExtractor",
+			"name": "Ore Extractor",
+			"materialCosts": [
+				{
+					"material": "aluminum",
+					"quantity": 4
+				},
+				{
+					"material": "iron",
+					"quantity": 5
+				},
+				{
+					"material": "tungsten",
+					"quantity": 2
+				}
+			],
+			"production": {
+				"power": 0
 			},
-			{
-				"material": "iron",
-				"quantity": 5
-			},
-			{
-				"material": "tungsten",
-				"quantity": 2
+			"powerCost": {
+				"power": 5,
+				"fuel": 0
 			}
-		],
-		"production": {
-			"power": 0
 		},
-		"powerCost": {
-			"power": 5
-		}
-	},
-	{
-		"id": "solarArray",
-		"name": "Solar Array",
-		"materialCosts": [
-			{
-				"material": "beryllium",
-				"quantity": 2
+		{
+			"id": "gasExtractor",
+			"name": "Gas Extractor",
+			"materialCosts": [
+				{
+					"material": "aluminum",
+					"quantity": 5
+				},
+				{
+					"material": "copper",
+					"quantity": 3
+				},
+				{
+					"material": "nickel",
+					"quantity": 4
+				}
+			],
+			"production": {
+				"power": 0
 			},
-			{
-				"material": "copper",
-				"quantity": 3
-			},
-			{
-				"material": "aluminum",
-				"quantity": 4
+			"powerCost": {
+				"power": 5,
+				"fuel": 0
 			}
-		],
-		"production": {
-			"power": 6
 		},
-		"powerCost": {
-			"power": 0
+		{
+			"id": "liquidExtractor",
+			"name": "Liquid Extractor",
+			"materialCosts": [
+				{
+					"material": "aluminum",
+					"quantity": 5
+				},
+				{
+					"material": "iron",
+					"quantity": 3
+				},
+				{
+					"material": "nickel",
+					"quantity": 4
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
 		}
-	}
-]
+	],
+	"Power": [
+		{
+			"id": "solarArray",
+			"name": "Solar Array",
+			"materialCosts": [
+				{
+					"material": "beryllium",
+					"quantity": 2
+				},
+				{
+					"material": "copper",
+					"quantity": 3
+				},
+				{
+					"material": "aluminum",
+					"quantity": 4
+				}
+			],
+			"production": {
+				"power": 6
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "solarDome",
+			"name": "Solar Dome",
+			"materialCosts": [
+				{
+					"material": "tau grade rheostat",
+					"quantity": 2
+				},
+				{
+					"material": "aluminum",
+					"quantity": 4
+				}
+			],
+			"production": {
+				"power": 16
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "fuelGenerator",
+			"name": "Fueled Generator",
+			"materialCosts": [
+				{
+					"material": "tungsten",
+					"quantity": 4
+				},
+				{
+					"material": "austenitic manifold",
+					"quantity": 1
+				},
+				{
+					"material": "isocentered magnet",
+					"quantity": 1
+				},
+				{
+					"material": "tau grade rheostat",
+					"quantity": 1
+				}
+			],
+			"production": {
+				"power": 20
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 1
+			}
+		},
+		{
+			"id": "windTurbine",
+			"name": "Wind Turbine",
+			"materialCosts": [
+				{
+					"material": "aluminum",
+					"quantity": 5
+				},
+				{
+					"material": "nickel",
+					"quantity": 3
+				},
+				{
+					"material": "cobalt",
+					"quantity": 2
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "advWindTurbine",
+			"name": "Wind Turbine Advanced",
+			"materialCosts": [
+				{
+					"material": "aluminum",
+					"quantity": 5
+				},
+				{
+					"material": "isocentered magnet",
+					"quantity": 2
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		}
+	],
+	"Storage": [
+		{
+			"id": "solidStorage",
+			"name": "Solid Storage",
+			"materialCosts": [
+				{
+					"material": "iron",
+					"quantity": 6
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 3
+				},
+				{
+					"material": "aluminum",
+					"quantity": 5
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "gasStorage",
+			"name": "Gas Storage",
+			"materialCosts": [
+				{
+					"material": "copper",
+					"quantity": 6
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 3
+				},
+				{
+					"material": "tungsten",
+					"quantity": 5
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "liquidStorage",
+			"name": "Liquid Storage",
+			"materialCosts": [
+				{
+					"material": "nickel",
+					"quantity": 5
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 3
+				},
+				{
+					"material": "aluminum",
+					"quantity": 6
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "solidStorageMedium",
+			"name": "Medium Solid Storage",
+			"materialCosts": [
+				{
+					"material": "iron",
+					"quantity": 10
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 5
+				},
+				{
+					"material": "aluminum",
+					"quantity": 8
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "gasStorageMedium",
+			"name": "Medium Gas Storage",
+			"materialCosts": [
+				{
+					"material": "copper",
+					"quantity": 10
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 5
+				},
+				{
+					"material": "tungsten",
+					"quantity": 10
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "liquidStorageMedium",
+			"name": "Medium Liquid Storage",
+			"materialCosts": [
+				{
+					"material": "nickel",
+					"quantity": 8
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 5
+				},
+				{
+					"material": "aluminum",
+					"quantity": 10
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "transferContainer",
+			"name": "Transfer Container",
+			"materialCosts": [
+				{
+					"material": "iron",
+					"quantity": 8
+				},
+				{
+					"material": "tungsten",
+					"quantity": 5
+				},
+				{
+					"material": "lubricant",
+					"quantity": 4
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		}
+	],
+	"Structures": [],
+	"Crafting": [],
+	"Defenses": [],
+	"Furniture": [],
+	"Decorations": [],
+	"Displays": [],
+	"Miscellaneous": [
+		{
+			"id": "cargoLink",
+			"name": "Cargo Link",
+			"materialCosts": [
+				{
+					"material": "beryllium",
+					"quantity": 2
+				},
+				{
+					"material": "iron",
+					"quantity": 20
+				},
+				{
+					"material": "aluminum",
+					"quantity": 12
+				},
+				{
+					"material": "zero wire",
+					"quantity": 2
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "smallLandingPad",
+			"name": "Small Landing Pad",
+			"materialCosts": [
+				{
+					"material": "iron",
+					"quantity": 20
+				},
+				{
+					"material": "aluminum",
+					"quantity": 8
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "shipbuilderPad",
+			"name": "Shipbuilder Landing Pad",
+			"materialCosts": [
+				{
+					"material": "beryllium",
+					"quantity": 2
+				},
+				{
+					"material": "iron",
+					"quantity": 30
+				},
+				{
+					"material": "zero wire",
+					"quantity": 2
+				},
+				{
+					"material": "adaptive frame",
+					"quantity": 18
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		},
+		{
+			"id": "scanBooster",
+			"name": "Scan Booster",
+			"materialCosts": [
+				{
+					"material": "beryllium",
+					"quantity": 2
+				},
+				{
+					"material": "copper",
+					"quantity": 3
+				},
+				{
+					"material": "aluminum",
+					"quantity": 4
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 3,
+				"fuel": 0
+			}
+		}
+	],
+	"Robots": []
+}
