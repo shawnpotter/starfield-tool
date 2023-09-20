@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import outpostModules from '@/public/data/outpost/outpostModules.json'
 import { FaTrash } from 'react-icons/fa6'
 
+// Define an interface for a module
 interface ModuleType {
 	id: string
 	name: string
@@ -15,7 +16,9 @@ interface ModuleType {
 	}
 	powerCost: {
 		power: number
+		fuel: number
 	}
+	amount?: number
 }
 
 export default function OutpostCalculator() {
@@ -36,20 +39,59 @@ export default function OutpostCalculator() {
 	}, [selectedModulesList])
 
 	//handle module Selection and reset dropdown list
+
 	const handleModuleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const selectedModuleId = e.target.value
 		console.log('Selected Module ID:', selectedModuleId) // Log the selected module ID
+
 		if (selectedModuleId !== 'Select') {
-			const selectedModuleToAdd = outpostModules.find(
+			// Check if the selected module already exists in the list
+			const existingModuleIndex = selectedModulesList.findIndex(
 				(module) => module.id === selectedModuleId
 			)
-			if (selectedModuleToAdd) {
-				console.log('Selected Module:', selectedModuleToAdd) // Log the selected module
-				setSelectedModulesList([...selectedModulesList, selectedModuleToAdd])
-				console.log('Selected Modules List:', selectedModulesList) // Log the selected modules list
-				setSelectedModule('') // Reset the dropdown selection
+
+			if (existingModuleIndex !== -1) {
+				// If it exists, update the "amount" property
+				const updatedModulesList = [...selectedModulesList]
+
+				const existingModule = updatedModulesList[existingModuleIndex]
+				if (existingModule) {
+					existingModule.amount = (existingModule.amount ?? 1) + 1
+
+					// check the updated "amount"
+					console.log('Updated Module Amount:', existingModule.amount)
+
+					setSelectedModulesList(updatedModulesList)
+				}
+			} else {
+				// Find the selected module within the categories
+				const selectedModuleToAdd = Object.values(outpostModules)
+					.flatMap((category: ModuleType[]) => category)
+					.find((module: ModuleType) => module.id === selectedModuleId)
+
+				if (selectedModuleToAdd) {
+					console.log('Selected Module:', selectedModuleToAdd) // Log the selected module
+					setSelectedModulesList([...selectedModulesList, selectedModuleToAdd])
+					console.log('Selected Modules List:', [
+						...selectedModulesList,
+						selectedModuleToAdd,
+					]) // Log the selected modules list
+					setSelectedModule('') // Reset the dropdown selection
+				}
 			}
 		}
+	}
+
+	const handleAmountChange = (
+		index: number,
+		e: React.ChangeEvent<HTMLInputElement>
+	) => {
+		console.log('Changing amount for index:', index)
+		console.log('New amount:', e.target.value)
+		const updatedModulesList = [...selectedModulesList]
+		updatedModulesList[index].amount = parseInt(e.target.value, 10) // Convert input value to an integer
+		setSelectedModulesList(updatedModulesList)
+		console.log('Updated modules list:', updatedModulesList)
 	}
 
 	const handleRemoveModule = (moduleIndex: number) => {
@@ -66,14 +108,15 @@ export default function OutpostCalculator() {
 
 		// Iterate through the selected modules and calculate the total material costs
 		selectedModulesList.forEach((module) => {
+			const amount = module.amount || 1 // Use 1 as the default amount if not specified
 			module.materialCosts.forEach((materialCost) => {
 				const { material, quantity } = materialCost
 				if (totalMaterialCosts[material]) {
 					// If the material exists in the totalMaterialCosts object, add the quantity
-					totalMaterialCosts[material] += quantity
+					totalMaterialCosts[material] += quantity * amount
 				} else {
 					// If the material doesn't exist, initialize it with the quantity
-					totalMaterialCosts[material] = quantity
+					totalMaterialCosts[material] = quantity * amount
 				}
 			})
 		})
@@ -97,23 +140,31 @@ export default function OutpostCalculator() {
 							onChange={(e) => handleModuleChange(e)}
 						>
 							<option value='Select'>Select</option>
-							{outpostModules.map((module: any) => (
-								<option
-									key={module.name}
-									value={module.id}
+							{Object.entries(outpostModules).map(([category, options]) => (
+								<optgroup
+									label={category}
+									key={category}
 								>
-									{module.name}
-								</option>
+									{options.map((option) => (
+										<option
+											value={option.id}
+											key={option.id}
+										>
+											{option.name}
+										</option>
+									))}
+								</optgroup>
 							))}
 						</select>
 					</div>
 				</div>
 				{/* Output */}
 				<div className='mt-6'>
-					<table className='ml-10 w-1/4'>
+					<table className='ml-10 table-auto w-96'>
 						<thead className='border-b border-white'>
 							<tr className='text-left'>
 								<th className='pb-2'>Module Name</th>
+								<th className='pb-2'>Amount</th>
 								<th className='pb-2'>
 									<div>
 										<FaTrash className='text-white' />
@@ -124,10 +175,19 @@ export default function OutpostCalculator() {
 						<tbody>
 							{selectedModulesList.map((module, index) => (
 								<tr
-									className='py-2'
+									className='py-2 bg-neutral-500/50'
 									key={`${module.id}-${index}`}
 								>
 									<td className='py-2'>{module.name}</td>
+									<td className='py-2'>
+										<input
+											className='bg-neutral-800 w-12 mx-2 p-1 rounded'
+											type='number'
+											min={1}
+											value={module.amount ?? 1}
+											onChange={(e) => handleAmountChange(index, e)}
+										/>
+									</td>
 									<td className=' w-auto py-2'>
 										<div
 											className='flex cursor-pointer'
