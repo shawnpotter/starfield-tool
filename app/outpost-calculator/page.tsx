@@ -33,6 +33,31 @@ export default function OutpostCalculator() {
 	)
 
 	useEffect(() => {
+		const calculateTotalMaterialCost = () => {
+			console.log('Calculating Total Material Costs')
+			// Create an object to store the total material costs
+			const totalMaterialCosts: { [material: string]: number } = {}
+
+			// Iterate through the selected modules and calculate the total material costs
+			selectedModulesList.forEach((module) => {
+				const amount = module.amount ?? 1 // Use 1 as the default amount if not specified
+				module.materialCosts.forEach((materialCost) => {
+					const { material, quantity } = materialCost
+					if (totalMaterialCosts[material]) {
+						// If the material exists in the totalMaterialCosts object, add the quantity
+						totalMaterialCosts[material] += quantity * amount
+					} else {
+						// If the material doesn't exist, initialize it with the quantity
+						totalMaterialCosts[material] = quantity * amount
+					}
+				})
+			})
+
+			console.log('Total Material Costs:', totalMaterialCosts) // Log the total material costs
+
+			return totalMaterialCosts
+		}
+
 		// Calculate total material cost whenever selectedModulesList changes
 		const updatedTotalMaterialCosts = calculateTotalMaterialCost()
 		setTotalMaterialCosts(updatedTotalMaterialCosts)
@@ -100,32 +125,6 @@ export default function OutpostCalculator() {
 		console.log('Updated Modules List:', updatedModulesList) // Log the updated list
 		setSelectedModulesList(updatedModulesList)
 	}
-
-	const calculateTotalMaterialCost = () => {
-		console.log('Calculating Total Material Costs')
-		// Create an object to store the total material costs
-		const totalMaterialCosts: { [material: string]: number } = {}
-
-		// Iterate through the selected modules and calculate the total material costs
-		selectedModulesList.forEach((module) => {
-			const amount = module.amount || 1 // Use 1 as the default amount if not specified
-			module.materialCosts.forEach((materialCost) => {
-				const { material, quantity } = materialCost
-				if (totalMaterialCosts[material]) {
-					// If the material exists in the totalMaterialCosts object, add the quantity
-					totalMaterialCosts[material] += quantity * amount
-				} else {
-					// If the material doesn't exist, initialize it with the quantity
-					totalMaterialCosts[material] = quantity * amount
-				}
-			})
-		})
-
-		console.log('Total Material Costs:', totalMaterialCosts) // Log the total material costs
-
-		return totalMaterialCosts
-	}
-
 	return (
 		<div className='flex flex-row'>
 			<div className='w-full h-full mt-10'>
@@ -176,12 +175,13 @@ export default function OutpostCalculator() {
 							{selectedModulesList.map((module, index) => (
 								<tr
 									className='py-2 bg-neutral-500/50'
-									key={`${module.id}-${index}`}
+									key={`${module.id}`}
 								>
 									<td className='py-2'>{module.name}</td>
 									<td className='py-2'>
 										<input
 											className='bg-neutral-800 w-12 mx-2 p-1 rounded'
+											aria-label='Amount'
 											type='number'
 											min={1}
 											value={module.amount ?? 1}
