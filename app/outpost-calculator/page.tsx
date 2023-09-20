@@ -126,17 +126,19 @@ export default function OutpostCalculator() {
 		setSelectedModulesList(updatedModulesList)
 	}
 	return (
-		<div>
-			<div className='flex flex-col'>
-				<div className='mt-10 ml-10'>Outpost Calculator v1.0</div>
-				<div className='flex flex-row'>
+		<div className='h-full'>
+			<div className='flex flex-1 flex-col h-full lg:h-[90%] lg:mx-5'>
+				<div className='mt-5 lg:mt-10 py-2 font-semibold w-full bg-green-900/75 '>
+					<span className='ml-10'>Outpost Calculator v1.0</span>
+				</div>
+				<div className='flex flex-1 flex-col lg:flex-row h-full pb-20 bg-neutral-800/75'>
 					<div className='w-full h-full mt-10'>
 						{/* Input */}
-						<div className='ml-10 w-1/4'>
+						<div className='mx-4 lg:ml-10 lg:w-1/4'>
 							<h1>Outpost Modules</h1>
 							<div>
 								<select
-									className='bg-neutral-500/50 p-2 rounded-sm w-96'
+									className='bg-neutral-500/50 p-2 rounded-sm w-full lg:w-96'
 									title='module-select'
 									value={selectedModule}
 									onChange={(e) => handleModuleChange(e)}
@@ -162,7 +164,7 @@ export default function OutpostCalculator() {
 						</div>
 						{/* Output */}
 						<div className='mt-6'>
-							<table className='ml-10 table-auto w-96'>
+							<table className='lg:ml-10 table-auto w-full lg:w-96'>
 								<thead className='border-b border-white'>
 									<tr className='text-left'>
 										<th className='pb-2'>Module Name</th>
@@ -205,10 +207,10 @@ export default function OutpostCalculator() {
 							</table>
 						</div>
 					</div>
-					<div className='w-3/5 mt-10 justify-start bg-black/50 overflow-x-hidden text-lg'>
-						<table className='ml-10 w-full'>
-							<thead className=''>
-								<tr className='text-left border-b border-white/75'>
+					<div className='w-full lg:w-3/5 h-full lg:mt-10 justify-start bg-neutral-900/50 overflow-x-hidden lg:mx-10'>
+						<table className='w-full lg:mx-10'>
+							<thead>
+								<tr className='text-left text-lg border-b border-white/75'>
 									<th className='pb-2'>Resource</th>
 									<th className='pb-2'>Amount</th>
 								</tr>
