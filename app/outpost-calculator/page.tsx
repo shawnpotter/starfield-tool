@@ -126,102 +126,107 @@ export default function OutpostCalculator() {
 		setSelectedModulesList(updatedModulesList)
 	}
 	return (
-		<div className='flex flex-row'>
-			<div className='w-full h-full mt-10'>
-				{/* Input */}
-				<div className='ml-10 w-1/4'>
-					<h1>Outpost Modules</h1>
-					<div>
-						<select
-							className='bg-neutral-500/50 p-2 rounded-sm w-full'
-							title='module-select'
-							value={selectedModule}
-							onChange={(e) => handleModuleChange(e)}
-						>
-							<option value='Select'>Select</option>
-							{Object.entries(outpostModules).map(([category, options]) => (
-								<optgroup
-									label={category}
-									key={category}
+		<div>
+			<div className='flex flex-col'>
+				<div className='mt-10 ml-10'>Outpost Calculator v1.0</div>
+				<div className='flex flex-row'>
+					<div className='w-full h-full mt-10'>
+						{/* Input */}
+						<div className='ml-10 w-1/4'>
+							<h1>Outpost Modules</h1>
+							<div>
+								<select
+									className='bg-neutral-500/50 p-2 rounded-sm w-96'
+									title='module-select'
+									value={selectedModule}
+									onChange={(e) => handleModuleChange(e)}
 								>
-									{options.map((option) => (
-										<option
-											value={option.id}
-											key={option.id}
+									<option value='Select'>Select</option>
+									{Object.entries(outpostModules).map(([category, options]) => (
+										<optgroup
+											label={category}
+											key={category}
 										>
-											{option.name}
-										</option>
+											{options.map((option) => (
+												<option
+													value={option.id}
+													key={option.id}
+												>
+													{option.name}
+												</option>
+											))}
+										</optgroup>
 									))}
-								</optgroup>
-							))}
-						</select>
+								</select>
+							</div>
+						</div>
+						{/* Output */}
+						<div className='mt-6'>
+							<table className='ml-10 table-auto w-96'>
+								<thead className='border-b border-white'>
+									<tr className='text-left'>
+										<th className='pb-2'>Module Name</th>
+										<th className='pb-2'>Amount</th>
+										<th className='pb-2'>
+											<div>
+												<FaTrash className='text-white' />
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									{selectedModulesList.map((module, index) => (
+										<tr
+											className='py-2 bg-neutral-500/50'
+											key={`${module.id}`}
+										>
+											<td className='py-2'>{module.name}</td>
+											<td className='py-2'>
+												<input
+													className='bg-neutral-800 w-12 mx-2 p-1 rounded'
+													aria-label='Amount'
+													type='number'
+													min={1}
+													value={module.amount ?? 1}
+													onChange={(e) => handleAmountChange(index, e)}
+												/>
+											</td>
+											<td className=' w-auto py-2'>
+												<div
+													className='flex cursor-pointer'
+													onClick={() => handleRemoveModule(index)}
+												>
+													<FaTrash className='text-red-500' />
+												</div>
+											</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div className='w-3/5 mt-10 justify-start bg-black/50 overflow-x-hidden text-lg'>
+						<table className='ml-10 w-full'>
+							<thead className=''>
+								<tr className='text-left border-b border-white/75'>
+									<th className='pb-2'>Resource</th>
+									<th className='pb-2'>Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+								{Object.entries(totalMaterialCosts).map(([material, cost]) => (
+									<tr
+										className='border-b border-white/25'
+										key={material}
+									>
+										<td className='capitalize pl-2 mb-2'>{material}</td>
+										<td className='pl-2 mb-2'>{cost}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
 					</div>
 				</div>
-				{/* Output */}
-				<div className='mt-6'>
-					<table className='ml-10 table-auto w-96'>
-						<thead className='border-b border-white'>
-							<tr className='text-left'>
-								<th className='pb-2'>Module Name</th>
-								<th className='pb-2'>Amount</th>
-								<th className='pb-2'>
-									<div>
-										<FaTrash className='text-white' />
-									</div>
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							{selectedModulesList.map((module, index) => (
-								<tr
-									className='py-2 bg-neutral-500/50'
-									key={`${module.id}`}
-								>
-									<td className='py-2'>{module.name}</td>
-									<td className='py-2'>
-										<input
-											className='bg-neutral-800 w-12 mx-2 p-1 rounded'
-											aria-label='Amount'
-											type='number'
-											min={1}
-											value={module.amount ?? 1}
-											onChange={(e) => handleAmountChange(index, e)}
-										/>
-									</td>
-									<td className=' w-auto py-2'>
-										<div
-											className='flex cursor-pointer'
-											onClick={() => handleRemoveModule(index)}
-										>
-											<FaTrash className='text-red-500' />
-										</div>
-									</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div className='w-3/5 justify-start bg-black/50 overflow-x-hidden text-lg'>
-				<table className='ml-10 w-full'>
-					<thead className=''>
-						<tr className='text-left border-b border-white/75'>
-							<th className='pb-2'>Resource</th>
-							<th className='pb-2'>Amount</th>
-						</tr>
-					</thead>
-					<tbody>
-						{Object.entries(totalMaterialCosts).map(([material, cost]) => (
-							<tr
-								className='border-b border-white/25'
-								key={material}
-							>
-								<td className='capitalize pl-2 mb-2'>{material}</td>
-								<td className='pl-2 mb-2'>{cost}</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
 			</div>
 		</div>
 	)
