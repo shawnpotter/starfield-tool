@@ -16,7 +16,7 @@ export default function Navbar() {
 					</Link>
 				</div>
 				<div>
-					<ul className='flex flex-row gap-4'>
+					<ul className='flex flex-row gap-12'>
 						<li>
 							<Link href='/'>Home</Link>
 						</li>
