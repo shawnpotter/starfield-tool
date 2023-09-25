@@ -15,6 +15,9 @@ export default function Home() {
 					<Link href='/items'>
 						<div className={btn}>Item IDs</div>
 					</Link>
+					<Link href='/outpost-calculator'>
+						<div className={btn}>Outpost Calculator</div>
+					</Link>
 					<div className='text-center bg-zinc-400/25 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base'>
 						Coming Soon...
 					</div>
@@ -23,6 +26,12 @@ export default function Home() {
 			<div className='flex flex-col justify-start w-1/2 px-10 pt-[12rem] font-semibold text-lg'>
 				<h1>Updates</h1>
 				<div className='flex flex-col border rounded p-4'>
+					<span className='ml-5 font-normal'>9/20/2023:</span>
+					<span className='ml-5 font-normal'>
+						Outpost Calculator v1.0 is live. I will be adding more features to
+						it in the future.
+					</span>
+					<br />
 					<span className='ml-5 font-normal'>9/17/2023:</span>
 					<span className='ml-5 font-normal'>
 						Item ID tables are mostly finished. I haven&apos;t included weapons

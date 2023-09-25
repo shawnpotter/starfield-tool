@@ -6,17 +6,25 @@
 	body {
 		@apply text-white;
 	}
-	table {
-		@apply border-separate border-spacing-2 border-neutral-500 w-full table-auto;
+	option {
+		@apply bg-black;
 	}
-	thead {
-		@apply bg-zinc-800/75;
-	}
-	th,
-	td {
-		@apply border border-neutral-500 p-1;
-	}
-	tr {
-		@apply hover:bg-green-700;
+}
+
+@layer components {
+	.item-tables {
+		table {
+			@apply border-separate border-spacing-2 border-neutral-500 w-full table-auto;
+		}
+		thead {
+			@apply bg-zinc-800/75;
+		}
+		th,
+		td {
+			@apply border border-neutral-500 p-1;
+		}
+		tr {
+			@apply hover:bg-green-700;
+		}
 	}
 }
