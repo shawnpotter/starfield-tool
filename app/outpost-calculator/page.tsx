@@ -34,7 +34,6 @@ export default function OutpostCalculator() {
 
 	useEffect(() => {
 		const calculateTotalMaterialCost = () => {
-			console.log('Calculating Total Material Costs')
 			// Create an object to store the total material costs
 			const totalMaterialCosts: { [material: string]: number } = {}
 
@@ -53,8 +52,6 @@ export default function OutpostCalculator() {
 				})
 			})
 
-			console.log('Total Material Costs:', totalMaterialCosts) // Log the total material costs
-
 			return totalMaterialCosts
 		}
 
@@ -67,7 +64,6 @@ export default function OutpostCalculator() {
 
 	const handleModuleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const selectedModuleId = e.target.value
-		console.log('Selected Module ID:', selectedModuleId) // Log the selected module ID
 
 		if (selectedModuleId !== 'Select') {
 			// Check if the selected module already exists in the list
@@ -76,33 +72,24 @@ export default function OutpostCalculator() {
 			)
 
 			if (existingModuleIndex !== -1) {
-				// If it exists, update the "amount" property
+				// If it exists, remove it first
 				const updatedModulesList = [...selectedModulesList]
+				updatedModulesList.splice(existingModuleIndex, 1)
+				setSelectedModulesList(updatedModulesList)
+			}
 
-				const existingModule = updatedModulesList[existingModuleIndex]
-				if (existingModule) {
-					existingModule.amount = (existingModule.amount ?? 1) + 1
+			// Find the selected module within the categories
+			const selectedModuleToAdd = Object.values(outpostModules)
+				.flatMap((category: ModuleType[]) => category)
+				.find((module: ModuleType) => module.id === selectedModuleId)
 
-					// check the updated "amount"
-					console.log('Updated Module Amount:', existingModule.amount)
-
-					setSelectedModulesList(updatedModulesList)
-				}
-			} else {
-				// Find the selected module within the categories
-				const selectedModuleToAdd = Object.values(outpostModules)
-					.flatMap((category: ModuleType[]) => category)
-					.find((module: ModuleType) => module.id === selectedModuleId)
-
-				if (selectedModuleToAdd) {
-					console.log('Selected Module:', selectedModuleToAdd) // Log the selected module
-					setSelectedModulesList([...selectedModulesList, selectedModuleToAdd])
-					console.log('Selected Modules List:', [
-						...selectedModulesList,
-						selectedModuleToAdd,
-					]) // Log the selected modules list
-					setSelectedModule('') // Reset the dropdown selection
-				}
+			if (selectedModuleToAdd) {
+				// Initialize the amount property to 1 when adding a module
+				setSelectedModulesList([
+					...selectedModulesList,
+					{ ...selectedModuleToAdd, amount: 1 },
+				])
+				setSelectedModule('') // Reset the dropdown selection
 			}
 		}
 	}
@@ -111,19 +98,17 @@ export default function OutpostCalculator() {
 		index: number,
 		e: React.ChangeEvent<HTMLInputElement>
 	) => {
-		console.log('Changing amount for index:', index)
-		console.log('New amount:', e.target.value)
 		const updatedModulesList = [...selectedModulesList]
 		updatedModulesList[index].amount = parseInt(e.target.value, 10) // Convert input value to an integer
 		setSelectedModulesList(updatedModulesList)
-		console.log('Updated modules list:', updatedModulesList)
 	}
 
-	const handleRemoveModule = (moduleIndex: number) => {
-		const updatedModulesList = [...selectedModulesList]
-		updatedModulesList.splice(moduleIndex, 1)
-		console.log('Updated Modules List:', updatedModulesList) // Log the updated list
-		setSelectedModulesList(updatedModulesList)
+	const handleRemoveModule = async (moduleIndex: number) => {
+		setSelectedModulesList((prevModulesList) => {
+			const updatedModulesList = [...prevModulesList]
+			updatedModulesList.splice(moduleIndex, 1)
+			return updatedModulesList
+		})
 	}
 	return (
 		<div className='h-full'>
