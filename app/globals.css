@@ -9,6 +9,9 @@
 	option {
 		@apply bg-black;
 	}
+	nav li {
+		@apply font-semibold hover:text-blue-400;
+	}
 }
 
 @layer components {

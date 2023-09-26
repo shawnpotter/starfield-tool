@@ -32,7 +32,7 @@ const Table: React.FC<TableProps> = ({ tableData }) => {
 		>
 			<div className='h-full overflow-x-hidden'>
 				<table className='text-lg display'>
-					<thead className='sticky top-0'>
+					<thead className='sticky top-0 z-0'>
 						<tr>
 							<th>Item Name</th>
 							<th>Item ID</th>

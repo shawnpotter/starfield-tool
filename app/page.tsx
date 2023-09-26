@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaTwitter } from 'react-icons/fa6'
 
 export default function Home() {
 	const btn =
@@ -11,19 +10,22 @@ export default function Home() {
 				Starfield Tools
 			</h1>
 			<div className='w-full'>
-				<div className='flex flex-row gap-8 justify-center w-full px-4 sm:px-0'>
+				<div className='flex flex-col lg:flex-row gap-8 justify-center items-center w-full px-4 sm:px-0'>
 					<Link href='/items'>
 						<div className={btn}>Item IDs</div>
 					</Link>
 					<Link href='/outpost-calculator'>
-						<div className={btn}>Outpost Calculator</div>
+						<button className={btn}>Outpost Calculator</button>
 					</Link>
-					<div className='text-center bg-zinc-400/25 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base'>
+					<button
+						className={`${btn} bg-zinc-800 hover:bg-zinc-800`}
+						disabled
+					>
 						Coming Soon...
-					</div>
+					</button>
 				</div>
 			</div>
-			<div className='flex flex-col justify-start w-1/2 px-10 pt-[12rem] font-semibold text-lg'>
+			<div className='flex flex-col justify-start xl:w-1/2 md:px-10 pt-4 md:pt-[12rem] font-semibold text-lg'>
 				<h1>Updates</h1>
 				<div className='flex flex-col border rounded p-4'>
 					<span className='ml-5 font-normal'>9/20/2023:</span>
@@ -45,19 +47,6 @@ export default function Home() {
 						modification values. I&apos;ll add in skill modifiers later on.
 					</span>
 				</div>
-			</div>
-			<div className='pt-[5rem]'>
-				<span>
-					Questions, Comments, or Suggestions can be directed to my
-					<a
-						href='https://twitter.com/Spotter_Dev'
-						className=' inline-block ml-1'
-					>
-						<button className='flex flex-row bg-[#26A7DE]/75 py-1 px-4 rounded-xl font-extrabold just items-center'>
-							<FaTwitter className='mr-2' /> Twitter
-						</button>
-					</a>
-				</span>
 			</div>
 		</main>
 	)
