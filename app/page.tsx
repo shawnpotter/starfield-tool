@@ -28,7 +28,7 @@ export default function Home() {
 			<div className='flex flex-col justify-start xl:w-1/2 md:px-10 pt-4 md:pt-[12rem] font-semibold text-lg'>
 				<h1>Updates</h1>
 				<div className='flex flex-col border rounded p-4'>
-					<span className='ml-5 font-normal'>9/20/2023:</span>
+					<span className='ml-5 font-normal'>9/26/2023:</span>
 					<span className='ml-5 font-normal'>
 						Outpost Calculator v1.0 is live. I will be adding more features to
 						it in the future.
