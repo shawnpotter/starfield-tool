@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+import kofiButton from '@/public/kofi_button_dark.webp'
 
 import { HiOutlineMenu } from 'react-icons/hi'
 
@@ -15,7 +17,7 @@ export default function Navbar() {
 
 	useEffect(() => {
 		window.addEventListener('resize', () => {
-			if (window.innerWidth > 768) {
+			if (window.innerWidth > 1024) {
 				setIsMenuOpen(false)
 			}
 		})
@@ -27,28 +29,24 @@ export default function Navbar() {
 	return (
 		<nav className='block justify-between w-full bg-zinc-800/75 h-[56px]'>
 			<div className='flex justify-between items-center h-full shadow shadow-black z-50'>
-				<div className='ml-4'>
+				<div className='ml-8'>
 					<Link href='/'>
-						<span>
+						<div>
 							<strong className='text-lg uppercase'>Starfield Tools</strong>{' '}
-							<em className='hidden md:inline-block'>
-								<small>by @Spotter_Dev</small>
-							</em>
-						</span>
+						</div>
 					</Link>
 				</div>
-				<div className='mr-4'>
+				<div className='mr-4 flex items-center lg:hidden'>
 					<button
 						type='button'
 						aria-label='menu'
-						className='md:hidden'
 						onClick={toggleNavOpen}
 					>
 						<HiOutlineMenu className='text-3xl' />
 					</button>
 				</div>
-				<div className='hidden md:inline-block mr-8'>
-					<ul className='flex flex-row gap-12'>
+				<div className='hidden lg:inline-block'>
+					<ul className='flex flex-row lg:gap-12 mr-8'>
 						<li>
 							<Link href='/'>Home</Link>
 						</li>
@@ -61,13 +59,28 @@ export default function Navbar() {
 						<li>
 							<Link href='/about'>About</Link>
 						</li>
+						<li>
+							<div className='relative'>
+								<a
+									href='https://ko-fi.com/spotter_dev'
+									aria-label='Support me on Ko-Fi'
+								>
+									<Image
+										src={kofiButton}
+										height={25}
+										alt='link to Ko-Fi page'
+										className='shadow-md shadow-black hidden lg:inline-block'
+									/>
+								</a>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div
 				className={
 					isMenuOpen
-						? 'fixed ease-in duration-100 w-full z-10'
+						? 'fixed ease-in duration-100 w-full z-10 shadow-lg shadow-black'
 						: 'fixed hidden ease-in duration-100'
 				}
 			>
@@ -85,6 +98,21 @@ export default function Navbar() {
 						<Link href='/about'>
 							<li>About</li>
 						</Link>
+						<li>
+							<div className='relative'>
+								<a
+									href='https://ko-fi.com/spotter_dev'
+									aria-label='Support me on Ko-Fi'
+								>
+									<Image
+										src={kofiButton}
+										height={32}
+										alt='link to Ko-Fi page'
+										className='shadow-md shadow-black'
+									/>
+								</a>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
