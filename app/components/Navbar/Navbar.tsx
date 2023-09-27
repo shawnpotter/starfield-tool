@@ -27,7 +27,7 @@ export default function Navbar() {
 	}, [pathname])
 
 	return (
-		<nav className='block justify-between w-full bg-zinc-800/75 h-[56px]'>
+		<nav className='block justify-between w-full bg-zinc-800 h-[56px]'>
 			<div className='flex justify-between items-center h-full shadow shadow-black z-50'>
 				<div className='ml-8'>
 					<Link href='/'>
