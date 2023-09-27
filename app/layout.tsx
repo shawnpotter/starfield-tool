@@ -21,7 +21,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${barlow.className} bg-black bg-topo-dark`}>
-				<div className='bg-zinc-900/50 h-screen'>
+				<div className='h-screen'>
 					<Navbar />
 					<div className=''>{children}</div>
 				</div>
