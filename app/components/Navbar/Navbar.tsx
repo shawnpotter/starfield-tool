@@ -58,6 +58,9 @@ export default function Navbar() {
 						<li>
 							<Link href='/outpost-calculator'>Outpost Calculator</Link>
 						</li>
+						<li>
+							<Link href='/about'>About</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -78,6 +81,9 @@ export default function Navbar() {
 						</Link>
 						<Link href='/outpost-calculator'>
 							<li>Outpost Calculator</li>
+						</Link>
+						<Link href='/about'>
+							<li>About</li>
 						</Link>
 					</ul>
 				</div>
