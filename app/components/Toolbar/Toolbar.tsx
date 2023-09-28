@@ -8,7 +8,6 @@ interface ToolbarProps {
 
 export default function Toolbar(props: ToolbarProps) {
 	const handleButtonClick = (newTable: string) => {
-		console.log('Button Clicked. New Table to be loaded:', newTable)
 		props.onTableChange(newTable)
 	}
 

@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar'
+import { Analytics } from '@vercel/analytics/react'
 
 const barlow = Barlow({
 	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -21,9 +22,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${barlow.className} bg-black bg-topo-dark`}>
-				<div className='bg-zinc-900/50 h-screen'>
+				<div className='h-screen'>
 					<Navbar />
 					<div className=''>{children}</div>
+					<Analytics />
 				</div>
 			</body>
 		</html>

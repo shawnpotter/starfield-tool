@@ -20,7 +20,6 @@ export default function Items() {
 
 	//handle table selection
 	const handleTableChange = (newTable: string) => {
-		console.log('New Table to be loaded:', newTable)
 		setSelectedTable(newTable)
 	}
 
