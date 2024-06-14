@@ -28,6 +28,7 @@ const ModuleSelect: React.FC<ModuleSelectProps> = ({
 						<optgroup
 							label={category}
 							key={category}
+							className='text-black'
 						>
 							{options.map((option) => (
 								<option
