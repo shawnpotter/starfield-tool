@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 interface ToolbarProps {
-	onTableChange: (newTable: string) => void
+	readonly onTableChange: (newTable: string) => void
 }
 
 export default function Toolbar(props: ToolbarProps) {
@@ -35,47 +35,63 @@ export default function Toolbar(props: ToolbarProps) {
 					mobileMenuVisible ? 'block' : 'hidden'
 				}`}
 			>
-				<li
-					onClick={() => handleButtonClick('inorganic')}
-					className={btn}
-				>
-					Inorganic
+				<li>
+					<button
+						onClick={() => handleButtonClick('inorganic')}
+						className={btn}
+					>
+						Inorganic
+					</button>
 				</li>
-				<li
-					onClick={() => handleButtonClick('organic')}
-					className={btn}
-				>
-					Organic
+				<li>
+					<button
+						onClick={() => handleButtonClick('organic')}
+						className={btn}
+					>
+						Organic
+					</button>
 				</li>
-				<li
-					onClick={() => handleButtonClick('manufactured')}
-					className={btn}
-				>
-					Manufactured
+				<li>
+					<button
+						onClick={() => handleButtonClick('manufactured')}
+						className={btn}
+					>
+						Manufactured
+					</button>
 				</li>
-				<li
-					onClick={() => handleButtonClick('food')}
-					className={btn}
-				>
-					Food
+				<li>
+					<button
+						onClick={() => handleButtonClick('food')}
+						className={btn}
+					>
+						Food
+					</button>
 				</li>
-				{/* <li
+				{/* 
+				<li>
+					<button 
 					onClick={() => handleButtonClick('weapons')}
 					className={btn}
-				>
+					>
 					Weapons
-				</li> */}
-				<li
-					onClick={() => handleButtonClick('ammo')}
-					className={btn}
-				>
-					Ammo
+					</button>
+				</li> 
+				*/}
+				<li>
+					<button
+						onClick={() => handleButtonClick('ammo')}
+						className={btn}
+					>
+						Ammo
+					</button>
 				</li>
-				<li
-					onClick={() => handleButtonClick('misc')}
-					className={btn}
-				>
-					Misc
+				<li>
+					<button
+						onClick={() => handleButtonClick('misc')}
+						className={btn}
+					>
+						Misc
+					</button>
 				</li>
 			</ul>
 		</div>
