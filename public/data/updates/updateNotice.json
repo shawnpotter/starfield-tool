@@ -1,0 +1,19 @@
+{
+	"updates": [
+		{
+			"date": "6/14/2024",
+			"message": "New patch for the game and renewed interest in updating the tools here. Sorry it took so long. I've added a download and upload feature to the Outpost Calculator. Now that Melee weapons have tiers and crafting I'll be taking another look at finishing the Weapon Mod Calculator again."
+		},
+		{
+			"date": "9/26/2023",
+			"message": "Outpost Calculator v1.0 is live. I will be adding more features to it in the future."
+		},
+		{
+			"date": "9/17/2023",
+			"message": {
+				"1": "Item ID tables are mostly finished. I haven't included weapons yet because I have not figured out how to properly work with the tiered weapons in the console yet. I will be adding them soon.",
+				"2": "I will be introducing new tools soon. Outpost building and Weapon Modification calculators are next. First iteration of Weapon Mod calculator will be a simple calculator that will tell you base modification values. I'll add in skill modifiers later on."
+			}
+		}
+	]
+}
