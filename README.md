@@ -20,7 +20,7 @@ Starfield, by Bethesda Softworks, is a game that takes you on interstellar adven
 
 ## Contributing
 
-**Please Note:** At the moment, this repository is not open for direct contributions or pull requests. However, your input, feedback, and issue reports are highly valued and appreciated!
+**Please Note:** At the moment, this repository is not open for direct contributions or pull requests because of it's nature as a personal project. However, your input, feedback, and issue reports are highly valued and appreciated!
 
 ### How You Can Contribute
 
