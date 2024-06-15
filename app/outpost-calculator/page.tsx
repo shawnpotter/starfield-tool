@@ -202,7 +202,7 @@ export default function OutpostCalculator() {
 		<div className='h-full'>
 			<div className='flex flex-1 flex-col h-full lg:h-[90%] lg:mx-5'>
 				<div className='mt-5 lg:mt-10 py-2 font-semibold w-full justify-between items-center bg-green-900/75 flex flex-row '>
-					<span className='ml-10'>Outpost Calculator v1.0</span>
+					<span className='ml-10'>Outpost Calculator v1.01</span>
 					<div className='flex flex-row justify-end'>
 						<FileUpload handleFileUpload={handleFileUpload} />
 						<DownloadButton handleDownload={handleDownload} />
