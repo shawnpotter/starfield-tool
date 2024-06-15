@@ -48,11 +48,14 @@ const SelectedModulesList: React.FC<SelectedModulesListProps> = ({
 								/>
 							</td>
 							<td className='w-auto py-2'>
-								<div
-									className='flex cursor-pointer'
-									onClick={() => handleRemoveModule(index)}
-								>
-									<FaTrash className='text-red-500' />
+								<div>
+									<button
+										className='flex cursor-pointer'
+										onClick={() => handleRemoveModule(index)}
+										title='remove'
+									>
+										<FaTrash className='text-red-500' />
+									</button>
 								</div>
 							</td>
 						</tr>
