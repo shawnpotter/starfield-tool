@@ -16,7 +16,7 @@ Starfield, by Bethesda Softworks, is a game that takes you on interstellar adven
 
 - **Item IDs:** This page contains tables full of items and their respective IDs that you can spawn in the Console.
 - **Outpost Calculator (Work In Progress):** Will give you a list of all the materials you need to build the items you want for your outpost as well as help you plan out production calculations.
-- **Weapon Calculator (Work In Progress):** Will allow you to mock up weapons and swap out modifications to see what type of stats you can get without having to spend the time, money, or resources to do so in-game.
+- **Weapon Calculator (To Be Completed):** Will allow you to mock up weapons and swap out modifications to see what type of stats you can get without having to spend the time, money, or resources to do so in-game.
 
 ## Contributing
 
