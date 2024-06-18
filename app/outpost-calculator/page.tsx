@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import DOMPurify from 'dompurify'
 import { ModuleType } from '@/public/data/types/ModuleType'
 import outpostModules from '@/public/data/outpost/outpostModules.json'
 import ModuleSelect from '@/app/components/calculator/ModuleSelect'
@@ -166,7 +167,8 @@ export default function OutpostCalculator() {
 		if (file) {
 			try {
 				const fileContents = await file.text()
-				const data = JSON.parse(fileContents)
+				const sanitizedContents = DOMPurify.sanitize(fileContents)
+				const data = JSON.parse(sanitizedContents)
 
 				// Check if the data has the expected structure
 				if (data.modules && data.totalCosts) {
@@ -179,7 +181,7 @@ export default function OutpostCalculator() {
 						if (Array.isArray(module.materialCosts)) {
 							module.materialCosts.forEach((cost) => {
 								const { material, quantity } = cost
-								const amount = module.amount || 1
+								const amount = module.amount ?? 1
 								if (acc[material]) {
 									acc[material] += quantity * amount
 								} else {
