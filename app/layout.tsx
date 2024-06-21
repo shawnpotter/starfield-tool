@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar'
 import { Analytics } from '@vercel/analytics/react'
 
 const barlow = Barlow({
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: {
+}: Readonly<{
 	children: React.ReactNode
-}) {
+}>) {
 	return (
 		<html lang='en'>
 			<body className={`${barlow.className} bg-black bg-topo-dark`}>
