@@ -1,25 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import DOMPurify from 'dompurify'
+import { ModuleType } from '@/public/data/types/ModuleType'
 import outpostModules from '@/public/data/outpost/outpostModules.json'
-import { FaTrash } from 'react-icons/fa6'
-
-// Define an interface for a module
-interface ModuleType {
-	id: string
-	name: string
-	materialCosts: {
-		material: string
-		quantity: number
-	}[]
-	production: {
-		power: number
-	}
-	powerCost: {
-		power: number
-		fuel: number
-	}
-	amount?: number
-}
+import ModuleSelect from '@/app/components/calculator/ModuleSelect'
+import SelectedModulesList from '@/app/components/calculator/SelectedModuleList'
+import TotalMaterialCosts from '@/app/components/calculator/TotalMaterialCosts'
+import DownloadButton from '@/app/components/calculator/DownloadButton'
+import FileUpload from '@/app/components/calculator/FileUpload'
 
 export default function OutpostCalculator() {
 	const [selectedModule, setSelectedModule] = useState('')
@@ -61,7 +49,6 @@ export default function OutpostCalculator() {
 	}, [selectedModulesList])
 
 	//handle module Selection and reset dropdown list
-
 	const handleModuleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const selectedModuleId = e.target.value
 
@@ -94,6 +81,12 @@ export default function OutpostCalculator() {
 		}
 	}
 
+	/**
+	 * Handles the change event for the amount input field.
+	 *
+	 * @param index - The index of the module in the selectedModulesList array.
+	 * @param e - The change event object.
+	 */
 	const handleAmountChange = (
 		index: number,
 		e: React.ChangeEvent<HTMLInputElement>
@@ -103,6 +96,11 @@ export default function OutpostCalculator() {
 		setSelectedModulesList(updatedModulesList)
 	}
 
+	/**
+	 * Removes a module from the selected modules list.
+	 *
+	 * @param moduleIndex - The index of the module to be removed.
+	 */
 	const handleRemoveModule = async (moduleIndex: number) => {
 		setSelectedModulesList((prevModulesList) => {
 			const updatedModulesList = [...prevModulesList]
@@ -110,109 +108,124 @@ export default function OutpostCalculator() {
 			return updatedModulesList
 		})
 	}
+
+	/**
+	 * Generates JSON data based on the selected modules and total costs.
+	 * @returns {string} The generated JSON data.
+	 */
+	const generateJsonData = () => {
+		const totalCostsData =
+			Object.keys(totalMaterialCosts).length > 0 ? totalMaterialCosts : null
+
+		return JSON.stringify(
+			{
+				modules: selectedModulesList,
+				totalCosts: totalCostsData,
+			},
+			null,
+			2
+		)
+	}
+
+	/**
+	 * Handles the download of JSON data.
+	 */
+	const handleDownload = () => {
+		// Generate JSON data
+		const jsonData = generateJsonData()
+
+		// Create a Blob from the JSON data
+		const blob = new Blob([jsonData], { type: 'application/json' })
+
+		// Create a URL for the Blob
+		const url = URL.createObjectURL(blob)
+
+		// Create a link element
+		const link = document.createElement('a')
+		link.href = url
+		link.download = 'outpost-data.json'
+
+		// Append the link to the document body
+		document.body.appendChild(link)
+
+		// Click the link to trigger the download
+		link.click()
+
+		// Remove the link from the document body
+		document.body.removeChild(link)
+
+		// Revoke the URL to free up memory
+		URL.revokeObjectURL(url)
+	}
+
+	/**
+	 * Handles the file upload event and processes the uploaded file.
+	 * @param e - The change event triggered by the file input element.
+	 */
+	const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+		const file = e.target.files?.[0]
+		if (file) {
+			try {
+				const fileContents = await file.text()
+				const sanitizedContents = DOMPurify.sanitize(fileContents)
+				const data = JSON.parse(sanitizedContents)
+
+				// Check if the data has the expected structure
+				if (data.modules && data.totalCosts) {
+					setSelectedModulesList(data.modules)
+					setTotalMaterialCosts(data.totalCosts)
+				} else {
+					// If the data has a different structure, try to extract the modules and costs
+					const modules = Array.isArray(data) ? data : Object.values(data)
+					const costs = modules.reduce((acc, module: ModuleType) => {
+						if (Array.isArray(module.materialCosts)) {
+							module.materialCosts.forEach((cost) => {
+								const { material, quantity } = cost
+								const amount = module.amount ?? 1
+								if (acc[material]) {
+									acc[material] += quantity * amount
+								} else {
+									acc[material] = quantity * amount
+								}
+							})
+						}
+						return acc
+					}, {})
+
+					setSelectedModulesList(modules)
+					setTotalMaterialCosts(costs)
+				}
+			} catch (error) {
+				console.error('Error parsing JSON file:', error)
+			}
+		}
+	}
 	return (
 		<div className='h-full'>
 			<div className='flex flex-1 flex-col h-full lg:h-[90%] lg:mx-5'>
-				<div className='mt-5 lg:mt-10 py-2 font-semibold w-full bg-green-900/75 '>
-					<span className='ml-10'>Outpost Calculator v1.0</span>
+				<div className='mt-5 lg:mt-10 py-2 font-semibold w-full justify-between items-center bg-green-900/75 flex flex-row '>
+					<span className='ml-10'>Outpost Calculator v1.01</span>
+					<div className='flex flex-row justify-end'>
+						<FileUpload handleFileUpload={handleFileUpload} />
+						<DownloadButton handleDownload={handleDownload} />
+					</div>
 				</div>
 				<div className='flex flex-1 flex-col lg:flex-row h-full pb-20 bg-neutral-800/75'>
 					<div className='w-full h-full mt-10'>
 						{/* Input */}
-						<div className='mx-4 lg:ml-10 lg:w-1/4'>
-							<h1>Outpost Modules</h1>
-							<div>
-								<select
-									className='bg-neutral-500/50 p-2 rounded-sm w-full lg:w-96'
-									title='module-select'
-									value={selectedModule}
-									onChange={(e) => handleModuleChange(e)}
-								>
-									<option value='Select'>Select</option>
-									{Object.entries(outpostModules).map(([category, options]) => (
-										<optgroup
-											label={category}
-											key={category}
-										>
-											{options.map((option) => (
-												<option
-													value={option.id}
-													key={option.id}
-												>
-													{option.name}
-												</option>
-											))}
-										</optgroup>
-									))}
-								</select>
-							</div>
-						</div>
+						<ModuleSelect
+							selectedModule={selectedModule}
+							handleModuleChange={handleModuleChange}
+							outpostModules={outpostModules}
+						/>
 						{/* Output */}
-						<div className='mt-6'>
-							<table className='lg:ml-10 table-auto w-full lg:w-96'>
-								<thead className='border-b border-white'>
-									<tr className='text-left'>
-										<th className='pb-2'>Module Name</th>
-										<th className='pb-2'>Amount</th>
-										<th className='pb-2'>
-											<div>
-												<FaTrash className='text-white' />
-											</div>
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									{selectedModulesList.map((module, index) => (
-										<tr
-											className='py-2 bg-neutral-500/50'
-											key={`${module.id}`}
-										>
-											<td className='py-2'>{module.name}</td>
-											<td className='py-2'>
-												<input
-													className='bg-neutral-800 w-12 mx-2 p-1 rounded'
-													aria-label='Amount'
-													type='number'
-													min={1}
-													value={module.amount ?? 1}
-													onChange={(e) => handleAmountChange(index, e)}
-												/>
-											</td>
-											<td className=' w-auto py-2'>
-												<div
-													className='flex cursor-pointer'
-													onClick={() => handleRemoveModule(index)}
-												>
-													<FaTrash className='text-red-500' />
-												</div>
-											</td>
-										</tr>
-									))}
-								</tbody>
-							</table>
-						</div>
+						<SelectedModulesList
+							selectedModulesList={selectedModulesList}
+							handleAmountChange={handleAmountChange}
+							handleRemoveModule={handleRemoveModule}
+						/>
 					</div>
-					<div className='w-full lg:w-3/5 h-full lg:mt-10 justify-start bg-neutral-900/50 overflow-x-hidden lg:mx-10'>
-						<table className='w-full lg:mx-10'>
-							<thead>
-								<tr className='text-left text-lg border-b border-white/75'>
-									<th className='pb-2'>Resource</th>
-									<th className='pb-2'>Amount</th>
-								</tr>
-							</thead>
-							<tbody>
-								{Object.entries(totalMaterialCosts).map(([material, cost]) => (
-									<tr
-										className='border-b border-white/25'
-										key={material}
-									>
-										<td className='capitalize pl-2 mb-2'>{material}</td>
-										<td className='pl-2 mb-2'>{cost}</td>
-									</tr>
-								))}
-							</tbody>
-						</table>
-					</div>
+					<TotalMaterialCosts totalMaterialCosts={totalMaterialCosts} />
 				</div>
 			</div>
 		</div>
