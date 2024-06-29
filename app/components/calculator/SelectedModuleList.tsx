@@ -1,4 +1,3 @@
-import React from 'react'
 import { ModuleType } from '@/public/data/types/ModuleType'
 import { FaTrash } from 'react-icons/fa6'
 
