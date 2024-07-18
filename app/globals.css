@@ -30,4 +30,10 @@
 			@apply hover:bg-green-700;
 		}
 	}
+	.btn {
+		@apply rounded text-center text-black w-full bg-zinc-600 font-semibold shadow self-center border py-3 md:w-[8rem] lg:w-[10rem] xl:w-[14rem] md:text-sm lg:text-base hover:bg-zinc-800 hover:text-base cursor-pointer;
+	}
+	.main-page-btn {
+		@apply rounded text-center bg-zinc-600 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base hover:bg-zinc-800 cursor-pointer;
+	}
 }
