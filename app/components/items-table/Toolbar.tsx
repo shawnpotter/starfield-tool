@@ -14,8 +14,6 @@ export default function Toolbar(props: ToolbarProps) {
 	// State to manage the visibility of the mobile menu
 	const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
 
-	const btn =
-		'text-center bg-zinc-400/50 font-semibold shadow self-center border py-3 md:w-[8rem] lg:w-[10rem] xl:w-[14rem] md:text-sm lg:text-base  hover:bg-zinc-700/75 cursor-pointer'
 	return (
 		<div className='my-2'>
 			<h1 className='text-center mb-1 font-semibold'>Item ID Tables</h1>
@@ -31,64 +29,64 @@ export default function Toolbar(props: ToolbarProps) {
 			</div>
 
 			<ul
-				className={`md:flex justify-around ${
+				className={`flex flex-col md:flex-row gap-1 md:gap-0 justify-around w-full ${
 					mobileMenuVisible ? 'block' : 'hidden'
 				}`}
 			>
-				<li>
+				<li className='w-full md:w-auto'>
 					<button
 						onClick={() => handleButtonClick('inorganic')}
-						className={btn}
+						className={'btn'}
 					>
 						Inorganic
 					</button>
 				</li>
-				<li>
+				<li className='w-full md:w-auto'>
 					<button
 						onClick={() => handleButtonClick('organic')}
-						className={btn}
+						className={'btn'}
 					>
 						Organic
 					</button>
 				</li>
-				<li>
+				<li className='w-full md:w-auto'>
 					<button
 						onClick={() => handleButtonClick('manufactured')}
-						className={btn}
+						className={'btn'}
 					>
 						Manufactured
 					</button>
 				</li>
-				<li>
+				<li className='w-full md:w-auto'>
 					<button
 						onClick={() => handleButtonClick('food')}
-						className={btn}
+						className={'btn'}
 					>
 						Food
 					</button>
 				</li>
 				{/* 
-				<li>
+				<li className='w-full md:w-auto'>
 					<button 
 					onClick={() => handleButtonClick('weapons')}
-					className={btn}
+					className={'btn'}
 					>
 					Weapons
 					</button>
 				</li> 
 				*/}
-				<li>
+				<li className='w-full md:w-auto'>
 					<button
 						onClick={() => handleButtonClick('ammo')}
-						className={btn}
+						className={'btn'}
 					>
 						Ammo
 					</button>
 				</li>
-				<li>
+				<li className='w-full md:w-auto'>
 					<button
 						onClick={() => handleButtonClick('misc')}
-						className={btn}
+						className={'btn'}
 					>
 						Misc
 					</button>
