@@ -9,7 +9,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'topo-dark': "url('../public/background4k_dark_compressed.png')",
+				'topo-dark': "url('../public/background4k_dark.webp')",
 			},
 		},
 	},

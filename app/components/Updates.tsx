@@ -1,72 +1,26 @@
-import { useEffect, useState } from 'react'
-
-interface UpdateMessage {
-	[key: string]: string
-}
-
-interface Update {
-	date: string
-	message: string | UpdateMessage
-}
-
-interface UpdateData {
-	updates: Update[]
-}
-
 export default function Updates() {
-	const [updates, setUpdates] = useState<Update[]>([])
-
-	useEffect(() => {
-		fetch('data/updates/updateNotice.json')
-			.then((response) => response.json())
-			.then((data: UpdateData) => setUpdates(data.updates))
-			.catch((error) => console.error(error))
-	}, [])
-
-	// Function to render message
-	const renderMessage = (message: string | UpdateMessage) => {
-		console.log(message)
-		if (typeof message === 'string') {
-			return <p className='ml-4'>{message}</p>
-		} else {
-			return (
-				<ul className='ml-4'>
-					{Object.entries(message).map(([key, value]) => (
-						<li
-							className='mb-2'
-							key={key}
-						>
-							{value}
-						</li>
-					))}
-				</ul>
-			)
-		}
-	}
-	if (!updates || updates.length === 0) {
-		return (
-			<div className='flex h-96 justify-center flex-col items-center space-y-2'>
-				<span>Loading Update Feed</span>
-
-				<div className='mt-2 w-6 h-6 border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin'></div>
-			</div>
-		)
-	} else {
-		return (
-			<div className='flex flex-col justify-start xl:w-1/2 md:px-10 pt-4 md:pt-[12rem] font-semibold text-lg'>
-				<h2>Updates</h2>
-				<div className='flex flex-col border rounded bg-black/50 p-4'>
-					{updates.map((update) => (
-						<div
-							key={update.date}
-							className='mb-2 font-normal'
-						>
-							<p>{update.date}</p>
-							{renderMessage(update.message)}
-						</div>
-					))}
+	return (
+		<div className='flex flex-col justify-start xl:w-1/2 md:px-10 pt-4 md:pt-[12rem] font-semibold text-lg'>
+			<h2>Updates</h2>
+			<div className='flex flex-col border rounded bg-black/50 gap-4 p-4'>
+				<div>
+					<h3 className='mb-2 font-normal'>6/14/2024</h3>
+					<p>
+						New patch for the game and renewed interest in updating the tools
+						here. Sorry it took so long. I&apos;ve added a download and upload
+						feature to the Outpost Calculator. Now that Melee weapons have tiers
+						and crafting I&apos;ll be taking another look at finishing the
+						Weapon Mod Calculator.
+					</p>
+				</div>
+				<div>
+					<h3 className='mb-2 font-normal'>9/26/2023</h3>
+					<p>
+						Outpost Calculator v1.0 is live. I will be adding more features to
+						it in the future.
+					</p>
 				</div>
 			</div>
-		)
-	}
+		</div>
+	)
 }
