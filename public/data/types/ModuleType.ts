@@ -1,3 +1,4 @@
+//ModuleType.ts
 export interface ModuleType {
 	id: string
 	name: string
