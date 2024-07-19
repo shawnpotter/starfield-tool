@@ -1,3 +1,5 @@
+//page.tsx
+//TODO: when adding modules from a saved file, it needs to be added by calling the handleModuleChange function, because adding it directly to the selectedModulesList doesn't allow the handleRemoveModule function to work properly.
 'use client'
 import React, { useEffect, useState } from 'react'
 import { ModuleType } from '@/public/data/types/ModuleType'
@@ -7,6 +9,9 @@ import SelectedModulesList from '@/app/components/calculator/SelectedModuleList'
 import TotalMaterialCosts from '@/app/components/calculator/TotalMaterialCosts'
 import DownloadButton from '@/app/components/calculator/DownloadButton'
 import FileUpload from '@/app/components/calculator/FileUpload'
+import ResourceInput from '@/app/components/calculator/ResourceInput'
+import ResourceOutput from '@/app/components/calculator/ResourceOutput'
+import ClearButton from '@/app/components/calculator/ClearButton'
 
 export default function OutpostCalculator() {
 	const [selectedModule, setSelectedModule] = useState('')
@@ -97,12 +102,16 @@ export default function OutpostCalculator() {
 		})
 	}
 
+	const handleClearModules = () => {
+		setSelectedModulesList([])
+	}
+
 	return (
-		<div className='h-full'>
-			<div className='flex flex-1 flex-col h-full lg:h-[90%] lg:mx-5'>
-				<div className='mt-5 lg:mt-10 py-2 font-semibold w-full justify-between items-center bg-green-900/75 flex flex-row '>
-					<span className='ml-10'>Outpost Calculator v1.01</span>
-					<div className='flex flex-row justify-end'>
+		<div className='min-h-screen bg-neutral-800/75 text-sm'>
+			<div className='flex flex-col h-full'>
+				<div className=' py-2 font-semibold w-full justify-between items-center bg-green-900/75 flex flex-col md:flex-row px-6'>
+					<span>Outpost Calculator v1.01</span>
+					<div className='flex flex-col gap-4 md:flex-row items-center md:justify-end'>
 						<FileUpload
 							setSelectedModulesList={setSelectedModulesList}
 							setTotalMaterialCosts={setTotalMaterialCosts}
@@ -111,24 +120,34 @@ export default function OutpostCalculator() {
 							modulesList={selectedModulesList}
 							cost={totalMaterialCosts}
 						/>
+						<ClearButton onClick={handleClearModules} />
 					</div>
 				</div>
-				<div className='flex flex-1 flex-col lg:flex-row h-full pb-20 bg-neutral-800/75'>
-					<div className='w-full h-full mt-10'>
-						{/* Input */}
-						<ModuleSelect
-							selectedModule={selectedModule}
-							handleModuleChange={handleModuleChange}
-							outpostModules={outpostModules}
-						/>
-						{/* Output */}
-						<SelectedModulesList
-							selectedModulesList={selectedModulesList}
-							handleAmountChange={handleAmountChange}
-							handleRemoveModule={handleRemoveModule}
-						/>
+				<div
+					className='h-full px-5'
+					id='moduleSelects'
+				>
+					<div className='grid lg:grid-cols-3 md:grid-cols-2 mt-2 justify-between'>
+						<div className=''>
+							<ModuleSelect
+								selectedModule={selectedModule}
+								handleModuleChange={handleModuleChange}
+								outpostModules={outpostModules}
+							/>
+							<SelectedModulesList
+								selectedModulesList={selectedModulesList}
+								handleAmountChange={handleAmountChange}
+								handleRemoveModule={handleRemoveModule}
+							/>
+							<ResourceInput selectedModuleList={selectedModulesList} />
+						</div>
+						<div>
+							<ResourceOutput />
+						</div>
+						<div className=''>
+							<TotalMaterialCosts totalMaterialCosts={totalMaterialCosts} />
+						</div>
 					</div>
-					<TotalMaterialCosts totalMaterialCosts={totalMaterialCosts} />
 				</div>
 			</div>
 		</div>
