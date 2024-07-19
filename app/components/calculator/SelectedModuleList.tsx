@@ -33,7 +33,7 @@ const SelectedModulesList: React.FC<SelectedModulesListProps> = ({
 					{selectedModulesList.map((module, index) => (
 						<tr
 							className='py-2 bg-neutral-500/50'
-							key={`${module.id}`}
+							key={`${module.id}-${index}`}
 						>
 							<td className='py-2'>{module.name}</td>
 							<td className='py-2'>
