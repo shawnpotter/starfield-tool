@@ -4,6 +4,14 @@ import { ModuleType } from '@/public/data/types/ModuleType'
 import { FaTrash } from 'react-icons/fa6'
 import { oreTypes, gasTypes, liquidTypes } from '@/utils/materialLists'
 
+interface Module {
+	id: string
+	name: string
+	resource?: string
+}
+
+type ResourceOptions = Record<string, string[]>
+
 interface SelectedModulesListProps {
 	selectedModulesList: ModuleType[]
 	handleAmountChange: (
@@ -45,6 +53,36 @@ const SelectedModulesList: React.FC<SelectedModulesListProps> = ({
 		))
 	}
 
+	const renderResourceSelector = (
+		module: Module,
+		index: number,
+		resourceOptions: ResourceOptions | null
+	) => {
+		const isExtractor = module.id.toLowerCase().includes('extractor')
+		const isVaporExtractor = module.id.toLowerCase().includes('vapor')
+
+		if (isExtractor) {
+			if (isVaporExtractor) {
+				return <span>Water</span>
+			} else {
+				return (
+					<select
+						className='bg-neutral-900/50 p-1 w-full rounded'
+						value={module.resource ?? ''}
+						onChange={(e) => handleResourceChange(index, e.target.value)}
+						title='Select a resource'
+						aria-label='resource-select'
+					>
+						<option value=''>Select resource</option>
+						{resourceOptions ? renderOptions(resourceOptions) : null}
+					</select>
+				)
+			}
+		} else {
+			return <span>N/A</span>
+		}
+	}
+
 	return (
 		<div className='mt-4'>
 			<table className='2xl:table-fixed w-full border-0 border-t-2 border-dashed border-separate border-spacing-1'>
@@ -63,9 +101,6 @@ const SelectedModulesList: React.FC<SelectedModulesListProps> = ({
 				<tbody>
 					{selectedModulesList.map((module, index) => {
 						const resourceOptions = getResourceOptions(module.id)
-						const isExtractor = module.id.toLowerCase().includes('extractor')
-						const isVaporExtractor = module.id.toLowerCase().includes('vapor')
-
 						return (
 							<tr
 								className='py-2'
@@ -73,25 +108,7 @@ const SelectedModulesList: React.FC<SelectedModulesListProps> = ({
 							>
 								<td className='p-1 border rounded'>{module.name}</td>
 								<td className='p-1 border rounded'>
-									{isExtractor ? (
-										isVaporExtractor ? (
-											<span>Water</span>
-										) : (
-											<select
-												className='bg-neutral-900/50 p-1 w-full rounded'
-												value={module.resource || ''}
-												onChange={(e) =>
-													handleResourceChange(index, e.target.value)
-												}
-												title='Select a resource'
-											>
-												<option value=''>Select resource</option>
-												{resourceOptions && renderOptions(resourceOptions)}
-											</select>
-										)
-									) : (
-										<span>N/A</span>
-									)}
+									{renderResourceSelector(module, index, resourceOptions)}
 								</td>
 								<td className='p-1 border rounded'>
 									<input
