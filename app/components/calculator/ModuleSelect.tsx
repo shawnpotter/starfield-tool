@@ -14,8 +14,8 @@ const ModuleSelect: React.FC<ModuleSelectProps> = ({
 	outpostModules,
 }) => {
 	return (
-		<div className='mx-4 lg:ml-10 lg:w-1/4'>
-			<h1>Outpost Modules</h1>
+		<div className='w-full mt-4'>
+			<h1 className='text-base font-semibold'>Outpost Modules</h1>
 			<div>
 				<select
 					className='bg-neutral-500/50 p-2 rounded-sm w-full lg:w-96'

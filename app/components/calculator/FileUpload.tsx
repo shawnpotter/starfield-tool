@@ -1,5 +1,6 @@
 import DOMPurify from 'dompurify'
 import { ModuleType } from '@/public/data/types/ModuleType'
+import { FaUpload } from 'react-icons/fa6'
 
 interface FileUploadProps {
 	setSelectedModulesList: (modules: ModuleType[]) => void
@@ -61,18 +62,26 @@ const FileUpload: React.FC<FileUploadProps> = ({
 	}
 
 	return (
-		<div className='lg:ml-10 flex flex-row items-center'>
-			<label
-				htmlFor='fileInput'
-				className='block pr-2'
-			>
-				Upload Saved Base
-			</label>
-			<input
-				type='file'
+		<div>
+			<button
 				id='fileInput'
+				className='bg-cyan-700 px-4 py-1.5 shadow-black/75 shadow-sm rounded w-full flex flex-row items-center gap-2 '
+				onClick={() => {
+					const hiddenFileInput = document.getElementById('hiddenFileInput')
+					if (hiddenFileInput) {
+						hiddenFileInput.click()
+					}
+				}}
+			>
+				<FaUpload />
+				Upload File
+			</button>
+			<input
+				aria-label='Upload JSON file'
+				type='file'
+				id='hiddenFileInput'
 				accept='.json'
-				className='bg-neutral-500/50 p-2 rounded-sm w-full lg:w-96'
+				className='hidden'
 				onChange={handleFileUpload}
 			/>
 		</div>

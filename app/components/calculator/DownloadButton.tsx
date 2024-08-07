@@ -1,4 +1,5 @@
 import { ModuleType } from '@/public/data/types/ModuleType'
+import { FaSave } from 'react-icons/fa'
 
 interface DownloadButtonProps {
 	modulesList: ModuleType[]
@@ -62,9 +63,10 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
 	return (
 		<button
 			onClick={handleDownload}
-			className='mx-4 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700'
+			className='px-4 py-1.5 flex flex-row items-center gap-2 shadow-black/75 shadow-sm bg-blue-600 rounded hover:bg-blue-700'
 		>
-			Download Base
+			<FaSave />
+			Download
 		</button>
 	)
 }
