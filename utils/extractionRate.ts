@@ -113,7 +113,7 @@ export function getExtractionRate(
 	modifyExtractionRate(moduleType.name)
 
 	// Round the extraction rate to 2 decimal places using the custom round function
-	console.log('extractionRate:', extractionRate)
+	// console.log('extractionRate:', extractionRate)
 	return round(extractionRate, 3)
 }
 
