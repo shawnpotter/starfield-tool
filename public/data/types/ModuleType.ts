@@ -14,4 +14,5 @@ export interface ModuleType {
 		fuel: number
 	}
 	amount?: number
+	resource?: string
 }
