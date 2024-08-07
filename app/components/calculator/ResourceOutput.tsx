@@ -30,7 +30,7 @@ const ResourceOutput: React.FC<ResourceOutputProps> = ({
 	const handleTimeUnitChange = (
 		event: React.ChangeEvent<HTMLSelectElement>
 	) => {
-		console.log('Time unit changed:', event.target.value)
+		// console.log('Time unit changed:', event.target.value)
 		setSelectedTimeUnit(parseInt(event.target.value))
 	}
 
