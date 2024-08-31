@@ -37,3 +37,21 @@
 		@apply rounded text-center bg-zinc-600 font-semibold shadow self-center border py-3 w-[20rem] md:text-sm lg:text-base hover:bg-zinc-800 cursor-pointer;
 	}
 }
+
+@layer utilities {
+	.scrollbar ::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	.scrollbar ::-webkit-scrollbar-track {
+		@apply bg-black/25;
+	}
+
+	.scrollbar ::-webkit-scrollbar-thumb {
+		@apply bg-orange-500/75 rounded-full;
+	}
+
+	.scrollbar ::-webkit-scrollbar-thumb:hover {
+		@apply bg-orange-500;
+	}
+}
