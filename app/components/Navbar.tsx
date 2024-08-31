@@ -57,6 +57,9 @@ export default function Navbar() {
 							<Link href='/outpost-calculator'>Outpost Calculator</Link>
 						</li>
 						<li>
+							<Link href='/weapon-planner'>Weapon Planner</Link>
+						</li>
+						<li>
 							<Link href='/about'>About</Link>
 						</li>
 						<li>
