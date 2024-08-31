@@ -19,12 +19,9 @@ export default function Home() {
 					<Link href='/outpost-calculator'>
 						<button className={btn}>Outpost Calculator</button>
 					</Link>
-					<button
-						className={`${btn} bg-zinc-800 hover:bg-zinc-800`}
-						disabled
-					>
-						Coming Soon...
-					</button>
+					<Link href='/weapon-planner'>
+						<button className={btn}>Weapon Planner</button>
+					</Link>
 				</div>
 			</div>
 			<Updates />
