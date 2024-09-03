@@ -72,10 +72,10 @@ export default function WeaponPlanner() {
 								<div className='text-orange-300/75'>Fire Rate</div>
 								<div className=''>{selectedWeapon.fireRate}</div>
 							</div>
-							<div className='flex-col w-1/3'>
+							{/* <div className='flex-col w-1/3'> // Accuracy is just not do-able right now.
 								<div className='text-orange-300/75'>Accuracy</div>
 								<div className=''>{selectedWeapon.accuracy}</div>
-							</div>
+							</div> */}
 							<div className='flex-col w-1/3'>
 								<div className='text-orange-300/75'>Range</div>
 								<div className=''>{selectedWeapon.range}</div>
