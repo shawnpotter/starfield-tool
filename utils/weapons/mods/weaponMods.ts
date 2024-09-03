@@ -1,7 +1,8 @@
 import { Mod } from '@/utils/weaponType'
 
 //check for any items marked as TBD
-//all accuracy values are 0, and need to be figured out because the game doesn't have a single stat for it
+//accuracy is unable to be calculated at this point in time without inside knowledge of the game's code.
+//there's also a hidden value that effects deminishing returns on mods for accuracy.
 
 export const weaponMods: Record<string, Mod> = {
 	//barrel mods
@@ -69,8 +70,9 @@ export const weaponMods: Record<string, Mod> = {
 	},
 	//grip mods
 	ergonomicGrip: {
-		name: 'Ergonomic Grip',
-		description: '', // TBD
+		name: 'Ergonomic Stock',
+		description:
+			'A comfortable stock that helps increase Accuracy and Aim Down Sights speed.', // TBD
 		stabilityModifier: 0.05,
 		accuracyModifier: 0,
 		valueModifier: 0.2,
@@ -153,7 +155,7 @@ export const weaponMods: Record<string, Mod> = {
 		valueModifier: 0.5,
 	},
 	//interal mods
-	amplifer: {
+	amplifier: {
 		name: 'Amplifier',
 		description: '', // TBD
 		massModifier: 0.6,
@@ -214,7 +216,8 @@ export const weaponMods: Record<string, Mod> = {
 	//magazine mods
 	annihilatorRounds: {
 		name: 'Annihilator Rounds',
-		description: '', // TBD
+		description:
+			'Banned by almost every government, these rounds produce a disease-like effect that spreads to any target that gets too close', // TBD
 		valueModifier: 1.1,
 	},
 	armorPiercingRounds: {
@@ -344,7 +347,8 @@ export const weaponMods: Record<string, Mod> = {
 	doubleBarrel: {
 		// Big Bang only
 		name: 'Double Barrel',
-		description: 'switches the Big Bang to a double barrel shotgun', // TBD
+		description:
+			'Changes rounds fired to go through a two-barreled attachment for different spread shots',
 		accuracyModifier: 0, // TBD
 		rangeModifier: 0.2,
 		massModifier: 1,
@@ -451,7 +455,7 @@ export const weaponMods: Record<string, Mod> = {
 	},
 	reflexSight: {
 		name: 'Reflex Sight',
-		description: '', // TBD
+		description: 'reflex sight for quicker target acquistion and visibility',
 		valueModifier: 0.4,
 		massModifier: 0.2,
 	},

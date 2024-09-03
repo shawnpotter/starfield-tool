@@ -2,7 +2,7 @@
 export interface Mod {
 	name: string
 	description: string
-	accuracyModifier?: number
+	accuracyModifier?: number // unused in the app currently
 	damageModifier?: number
 	massModifier?: number
 	magazineCapacityModifier?: number
