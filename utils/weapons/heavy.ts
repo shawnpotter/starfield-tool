@@ -2,7 +2,7 @@ import { Weapon } from '@/utils/weaponType'
 
 export const heavy: Record<string, Weapon> = {
 	arcWelder: {
-		name: '',
+		name: 'Arc Welder',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -15,6 +15,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Arc_Welder.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -135,7 +136,7 @@ export const heavy: Record<string, Weapon> = {
 		],
 	},
 	autoRivet: {
-		name: '',
+		name: 'Auto-Rivet',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -148,6 +149,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Auto-Rivet.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -268,7 +270,7 @@ export const heavy: Record<string, Weapon> = {
 		],
 	},
 	bridger: {
-		name: '',
+		name: 'Bridger',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -281,6 +283,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Bridger.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -401,7 +404,7 @@ export const heavy: Record<string, Weapon> = {
 		],
 	},
 	cutter: {
-		name: '',
+		name: 'Cutter',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -414,6 +417,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Cutter.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -534,7 +538,7 @@ export const heavy: Record<string, Weapon> = {
 		],
 	},
 	magstorm: {
-		name: '',
+		name: 'Magstorm',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -547,6 +551,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Magstorm.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -667,7 +672,7 @@ export const heavy: Record<string, Weapon> = {
 		],
 	},
 	microgun: {
-		name: '',
+		name: 'Microgun',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -680,6 +685,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Microgun.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -800,7 +806,7 @@ export const heavy: Record<string, Weapon> = {
 		],
 	},
 	negotiator: {
-		name: '',
+		name: 'Negotiator',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -813,6 +819,7 @@ export const heavy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Negotiator.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',

@@ -16,6 +16,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 54.7,
 		mass: 7,
 		value: 12870,
+		picture: 'Big_Bang.webp',
 		modSlots: [
 			{
 				// barrels
@@ -121,6 +122,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 70.2,
 		mass: 3.2,
 		value: 2408,
+		picture: 'Equinox.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -241,7 +243,7 @@ export const energy: Record<string, Weapon> = {
 		],
 	},
 	novalight: {
-		name: '',
+		name: 'Novalight',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -254,6 +256,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Novalight.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -374,7 +377,7 @@ export const energy: Record<string, Weapon> = {
 		],
 	},
 	novablastDisruptor: {
-		name: '',
+		name: 'Novablast Disruptor',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -387,6 +390,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Novablast_Disruptor.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -507,7 +511,7 @@ export const energy: Record<string, Weapon> = {
 		],
 	},
 	orion: {
-		name: '',
+		name: 'Orion',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -520,6 +524,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Orion.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -640,7 +645,7 @@ export const energy: Record<string, Weapon> = {
 		],
 	},
 	solstice: {
-		name: '',
+		name: 'Solstice',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -653,6 +658,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Solstice.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -773,7 +779,7 @@ export const energy: Record<string, Weapon> = {
 		],
 	},
 	inflictor: {
-		name: '',
+		name: "Va'ruun Inflictor",
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -786,6 +792,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Varuun_Inflictor.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -906,7 +913,7 @@ export const energy: Record<string, Weapon> = {
 		],
 	},
 	starshard: {
-		name: '',
+		name: "Va'ruun Starshard",
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -919,6 +926,7 @@ export const energy: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Varuun_Starshard.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',

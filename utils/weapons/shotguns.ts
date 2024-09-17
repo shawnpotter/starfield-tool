@@ -2,7 +2,7 @@ import { Weapon } from '@/utils/weaponType'
 
 export const shotguns: Record<string, Weapon> = {
 	breach: {
-		name: '',
+		name: 'Breach',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -15,6 +15,7 @@ export const shotguns: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Breach.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -135,7 +136,7 @@ export const shotguns: Record<string, Weapon> = {
 		],
 	},
 	ooachman: {
-		name: '',
+		name: 'Coachman',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -148,6 +149,7 @@ export const shotguns: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Coachman.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -268,7 +270,7 @@ export const shotguns: Record<string, Weapon> = {
 		],
 	},
 	oldShotgun: {
-		name: '',
+		name: 'Old Earth Shotgun',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -281,6 +283,7 @@ export const shotguns: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Old_Earth_Shotgun.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -401,7 +404,7 @@ export const shotguns: Record<string, Weapon> = {
 		],
 	},
 	pacifier: {
-		name: '',
+		name: 'Pacifier',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -414,6 +417,7 @@ export const shotguns: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Pacifier.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -534,7 +538,7 @@ export const shotguns: Record<string, Weapon> = {
 		],
 	},
 	shotty: {
-		name: '',
+		name: 'Shotty',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -547,6 +551,7 @@ export const shotguns: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Shotty.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',

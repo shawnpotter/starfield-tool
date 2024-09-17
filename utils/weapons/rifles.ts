@@ -2,7 +2,7 @@ import { Weapon } from '@/utils/weaponType'
 
 export const rifles: Record<string, Weapon> = {
 	aa99: {
-		name: '',
+		name: 'AA-99',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -15,6 +15,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'AA-99.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -135,7 +136,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	beowulf: {
-		name: '',
+		name: 'Beowulf',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -148,6 +149,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Beowulf.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -268,7 +270,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	drumBeat: {
-		name: '',
+		name: 'DrumBeat',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -281,6 +283,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'DrumBeat.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -401,7 +404,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	grendal: {
-		name: '',
+		name: 'Grendel',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -414,6 +417,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Grendel.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -534,7 +538,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	kodama: {
-		name: '',
+		name: 'Kodama',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -547,6 +551,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Kodama.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -667,7 +672,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	lawgiver: {
-		name: '',
+		name: 'Lawgiver',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -680,6 +685,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Lawgiver.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -800,7 +806,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	maelstrom: {
-		name: '',
+		name: 'Maelstrom',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -813,6 +819,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Maelstrom.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -933,7 +940,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	magpulse: {
-		name: '',
+		name: 'Magpulse',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -946,6 +953,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Magpulse.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1065,8 +1073,8 @@ export const rifles: Record<string, Weapon> = {
 			},
 		],
 	},
-	magsheer: {
-		name: '',
+	magshear: {
+		name: 'Magshear',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -1079,6 +1087,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Magshear.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1199,7 +1208,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	magsniper: {
-		name: '',
+		name: 'Magsniper',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -1212,6 +1221,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Magsniper.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1332,7 +1342,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	oldAssaultRifle: {
-		name: '',
+		name: 'Old Earth Assault Rifle',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -1345,6 +1355,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Old_Earth_Assault_Rifle.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1465,7 +1476,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	oldHuntingRifle: {
-		name: '',
+		name: 'Old Earth Hunting Rifle',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -1478,6 +1489,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Old_Earth_Hunting_Rifle.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1598,7 +1610,7 @@ export const rifles: Record<string, Weapon> = {
 		],
 	},
 	tombstone: {
-		name: '',
+		name: 'Tombstone',
 		category: '',
 		damageType: '',
 		damageType2: '',
@@ -1611,6 +1623,7 @@ export const rifles: Record<string, Weapon> = {
 		accuracy: 0,
 		mass: 0,
 		value: 0,
+		picture: 'Tombstone.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',

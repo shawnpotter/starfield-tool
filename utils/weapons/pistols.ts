@@ -1,7 +1,7 @@
 import { Weapon } from '@/utils/weaponType'
 
 export const pistols: Record<string, Weapon> = {
-	deadeye: {
+	/* deadeye: {
 		name: 'Deadeye',
 		category: 'pistol',
 		damageType: 'physical',
@@ -159,7 +159,7 @@ export const pistols: Record<string, Weapon> = {
 				disabled: false,
 			},
 		],
-	},
+	}, */
 	eon: {
 		name: 'Eon',
 		category: 'pistol',
@@ -174,6 +174,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 67.5,
 		mass: 0.55,
 		value: 750,
+		picture: 'Eon.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -290,6 +291,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 69.6,
 		mass: 1,
 		value: 748,
+		picture: 'Kraken.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -389,6 +391,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 66.9,
 		mass: 1.1,
 		value: 4350,
+		picture: 'Old_Earth_Pistol.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -478,6 +481,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 68.1,
 		mass: 0.85,
 		value: 942,
+		picture: 'Rattler.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -611,6 +615,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 67.1,
 		mass: 2.3,
 		value: 5300,
+		picture: 'Razorback.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -744,6 +749,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 71.3,
 		mass: 0.7,
 		value: 4450,
+		picture: 'Regulator.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -877,6 +883,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 67.9,
 		mass: 0.65,
 		value: 825,
+		picture: 'Sidestar.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1010,6 +1017,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 67.7,
 		mass: 1.75,
 		value: 4800,
+		picture: 'Urban_Eagle.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',
@@ -1143,6 +1151,7 @@ export const pistols: Record<string, Weapon> = {
 		accuracy: 66.9,
 		mass: 1.1,
 		value: 8200,
+		picture: 'XM-2311.webp',
 		modSlots: [
 			{
 				slotType: 'barrel',

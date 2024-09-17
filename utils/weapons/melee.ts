@@ -8,6 +8,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 22,
 		mass: 0.34,
 		value: 1220,
+		picture: 'Barrow_Knife.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -71,6 +72,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 16,
 		mass: 0.36,
 		value: 505,
+		picture: 'Combat_Knife.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -133,6 +135,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 28,
 		mass: 3.51,
 		value: 2395,
+		picture: 'Osmium_Dagger.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -195,6 +198,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 17,
 		mass: 1.4,
 		value: 650,
+		picture: 'Rescue_Axe.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -253,6 +257,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 12,
 		mass: 0.4,
 		value: 365,
+		picture: 'Ripshank.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -315,6 +320,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 40,
 		mass: 0.45,
 		value: 3075,
+		picture: 'Tanto.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -377,6 +383,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 20,
 		mass: 1.4,
 		value: 935,
+		picture: 'UC_Naval_Cutlass.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -439,6 +446,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 62,
 		mass: 1.8,
 		value: 11260,
+		picture: 'Varuun_Painblade.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
@@ -501,6 +509,7 @@ export const melee: Record<string, Weapon> = {
 		damage: 49,
 		mass: 1.35,
 		value: 6140,
+		picture: 'Wakizashi.webp',
 		modSlots: [
 			{
 				slotType: 'blade',
