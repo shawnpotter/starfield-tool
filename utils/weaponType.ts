@@ -34,5 +34,6 @@ export interface Weapon {
 	accuracy?: number
 	mass: number
 	value: number
+	picture?: string
 	modSlots: ModSlot[]
 }
