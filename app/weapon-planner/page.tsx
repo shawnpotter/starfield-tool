@@ -52,7 +52,9 @@ export default function WeaponPlanner() {
 
 			{/* Column 2 */}
 			<div className='flex-grow w-full lg:w-6/12 flex flex-col gap-4  lg:overflow-auto'>
-				<WeaponImage imageSrc={selectedWeapon.picture} />
+				{selectedWeapon.picture && (
+					<WeaponImage imageSrc={selectedWeapon.picture} />
+				)}
 				<WeaponMods
 					selectedWeapon={selectedWeapon}
 					handleModClick={handleModClick}
