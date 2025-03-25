@@ -1,4 +1,9 @@
+/*
+ * The Deadeye is currently disabled because it is technically a unique weapon,
+ * which I don't want in this version of the app.
+ */
 import { Weapon } from '@/utils/weaponType'
+import { weaponMods } from '@/utils/weapons/mods/weaponMods'
 
 export const pistols: Record<string, Weapon> = {
 	/* deadeye: {
@@ -207,21 +212,9 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'muzzle',
 				mods: [
 					{ name: 'No Mod', description: '' },
-					{
-						name: 'Compensator',
-						description:
-							'increases stability and hip-fire accuracy at the cost of long-range accuracy',
-					},
-					{
-						name: 'Muzzle Brake',
-						description:
-							'increases long-range accuracy and stability at the cost of hip-fire accuracy',
-					},
-					{
-						name: 'Suppressor',
-						description:
-							'vastly reduces acoustic intensity while increasing accuracy at the cost of range',
-					},
+					weaponMods.compensator,
+					weaponMods.muzzleBrake,
+					weaponMods.suppressor,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -236,21 +229,22 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'magazine and battery',
 				mods: [
 					{ name: 'Standard Magazine', description: 'standard issue magazine' },
-					{ name: 'Drum Magazine', description: '' },
-					{ name: 'Explosive Rounds', description: '' },
-					{ name: 'Large Magazine', description: '' },
-					{ name: 'Tactical Magazine', description: '' },
-					{ name: 'Whitehot Rounds', description: '' },
+					{ ...weaponMods.drumMagazine, magazineCapacityModifier: 18 },
+					weaponMods.explosiveRounds,
+					{ ...weaponMods.largeMagazine, magazineCapacityModifier: 8 },
+					weaponMods.tacticalMagazine,
+					weaponMods.whitehotRounds,
 				],
 				defaultMod: 0,
 				disabled: false,
 			},
 			{
+				// laser sights
 				slotType: 'laser',
 				mods: [
-					{ name: 'No Mod', description: '' },
-					{ name: 'Laser Sight', description: '' },
-					{ name: 'Recon Laser Sight', description: '' },
+					{ name: 'No Mod', description: 'Emtpy laser sight attachment' },
+					weaponMods.laserSight,
+					weaponMods.reconLaserSight,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -259,8 +253,8 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'internal',
 				mods: [
 					{ name: 'No Mod', description: '' },
-					{ name: 'Hair Trigger', description: '' },
-					{ name: 'High Velocity', description: '' },
+					weaponMods.hairTrigger,
+					weaponMods.highVelocity,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -268,9 +262,9 @@ export const pistols: Record<string, Weapon> = {
 			{
 				slotType: 'receiver',
 				mods: [
-					{ name: 'Semi-automatic', description: '' },
-					{ name: 'Binary Trigger', description: '' },
-					{ name: 'Burst Fire', description: '' },
+					weaponMods.semiAutomatic,
+					weaponMods.binaryTrigger,
+					weaponMods.burstFire,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -298,19 +292,16 @@ export const pistols: Record<string, Weapon> = {
 				mods: [
 					//first mod slot should be the default mod
 					{ name: 'Standard Barrel', description: '' },
-					{ name: 'Bull Barrel', description: '' },
-					{ name: 'Long Barrel', description: '' },
-					{ name: 'Suppressor', description: '' },
+					weaponMods.bullBarrel,
+					weaponMods.longBarrel,
+					weaponMods.suppressor,
 				],
 				defaultMod: 0,
 				disabled: false,
 			},
 			{
 				slotType: 'laser',
-				mods: [
-					{ name: 'No Mod', description: '' },
-					{ name: 'Laser Sight', description: '' },
-				],
+				mods: [{ name: 'No Mod', description: '' }, weaponMods.laserSight],
 				defaultMod: 0,
 				disabled: false,
 			},
@@ -318,7 +309,7 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'optic',
 				mods: [
 					{ name: 'Iron Sights', description: '' },
-					{ name: 'Reflex Sight', description: '' },
+					weaponMods.reflexSight,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -327,9 +318,9 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'muzzle',
 				mods: [
 					{ name: 'Standard Muzzle', description: '' },
-					{ name: 'Compensator', description: '' },
-					{ name: 'Large Muzzle Brake', description: '' },
-					{ name: 'Muzzle Brake', description: '' },
+					weaponMods.compensator,
+					weaponMods.largeMuzzleBrake,
+					weaponMods.muzzleBrake,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -344,9 +335,9 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'magazine and battery',
 				mods: [
 					{ name: 'Standard Magazine', description: '' },
-					{ name: 'Drum Magazine', description: '' },
-					{ name: 'Gut Buster Rounds', description: '' },
-					{ name: 'Large Magazine', description: '' },
+					weaponMods.drumMagazine,
+					weaponMods.gutBusterRounds,
+					weaponMods.largeMagazine,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -355,16 +346,9 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'internal',
 				mods: [
 					{ name: 'No Mod', description: '' },
-					{
-						name: 'Hair Trigger',
-						description:
-							'installs a lighter trigger pull for increase fire rate',
-					},
-					{ name: 'High Powered', description: 'increases damage done' },
-					{
-						name: 'High Velocity',
-						description: 'internal module that increases accuracy and range',
-					},
+					weaponMods.hairTrigger,
+					weaponMods.highPowered,
+					weaponMods.highVelocity,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -409,9 +393,9 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'muzzle',
 				mods: [
 					{ name: 'No Mod', description: '' },
-					{ name: 'Compensator', description: '' },
-					{ name: 'Short Suppressor', description: '' },
-					{ name: 'Suppresor', description: '' },
+					weaponMods.compensator,
+					weaponMods.shortSuppressor,
+					weaponMods.suppressor,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -426,7 +410,7 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'grip and stock',
 				mods: [
 					{ name: 'Standard Grip', description: '' },
-					{ name: 'Tactical Grip', description: '' },
+					weaponMods.tacticalGrip,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -435,8 +419,8 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'magazine and battery',
 				mods: [
 					{ name: 'Standard Magazine', description: '' },
-					{ name: 'Armor-Piercing Rounds', description: '' },
-					{ name: 'Large Magazine', description: '' },
+					weaponMods.armorPiercingRounds,
+					weaponMods.largeMagazine,
 				],
 				defaultMod: 0,
 				disabled: false,
@@ -445,16 +429,9 @@ export const pistols: Record<string, Weapon> = {
 				slotType: 'internal',
 				mods: [
 					{ name: 'No Mod', description: '' },
-					{
-						name: 'Hair Trigger',
-						description:
-							'installs a lighter trigger pull for increase fire rate',
-					},
-					{ name: 'High Powered', description: 'increases damage done' },
-					{
-						name: 'High Velocity',
-						description: 'internal module that increases accuracy and range',
-					},
+					weaponMods.hairTrigger,
+					weaponMods.highPowered,
+					weaponMods.highVelocity,
 				],
 				defaultMod: 0,
 				disabled: false,

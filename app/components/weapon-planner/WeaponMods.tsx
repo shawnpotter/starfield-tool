@@ -1,14 +1,16 @@
 import React from 'react'
-import { Weapon, ModSlot } from '@/utils/weaponType'
+import { Weapon, ModSlot, Mod } from '@/utils/weaponType'
 
 interface WeaponModsProps {
 	selectedWeapon: Weapon
 	handleModClick: (slot: ModSlot) => void
+	selectedMods: Record<string, Mod>
 }
 
 const WeaponMods: React.FC<WeaponModsProps> = ({
 	selectedWeapon,
 	handleModClick,
+	selectedMods,
 }) => {
 	return (
 		<div className='grid grid-cols-2 lg:grid-cols-4 justify-items-center border border-orange-500/50 rounded bg-orange-500/10 p-4 gap-8'>
@@ -27,7 +29,9 @@ const WeaponMods: React.FC<WeaponModsProps> = ({
 						{slot
 							? slot.disabled
 								? 'Slot Disabled'
-								: slot.mods[0]?.name || 'Unnamed Mod'
+								: selectedMods[slot.slotType]?.name ||
+								  slot.mods[0]?.name ||
+								  'Unnamed Mod'
 							: 'No Mod Available'}
 					</div>
 				)

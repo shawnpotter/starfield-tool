@@ -10,6 +10,7 @@ interface ModSelectionModalProps {
 	onClose: () => void
 	activeSlot: ModSlot | null
 	onModSelect: (slotType: string, mod: Mod) => void
+	selectedMod: Mod | null
 }
 
 const ModSelectionModal: React.FC<ModSelectionModalProps> = ({
@@ -17,6 +18,7 @@ const ModSelectionModal: React.FC<ModSelectionModalProps> = ({
 	onClose,
 	activeSlot,
 	onModSelect,
+	selectedMod,
 }) => {
 	const modalRef = useRef<HTMLDivElement>(null)
 
@@ -53,7 +55,9 @@ const ModSelectionModal: React.FC<ModSelectionModalProps> = ({
 					{activeSlot.mods.map((mod, index) => (
 						<div
 							key={mod.name || index}
-							className='border-b border-orange-500/25 pb-4'
+							className={`border-b border-orange-500/25 pb-4 ${
+								mod.name === selectedMod?.name ? 'bg-orange-500/20' : ''
+							}`}
 						>
 							<div className='font-bold'>{mod.name || 'Unnamed Mod'}</div>
 							<div className='text-sm text-orange-300/75 mt-1'>

@@ -46,7 +46,7 @@ export const energy: Record<string, Weapon> = {
 				// laser sights
 				slotType: 'laser',
 				mods: [
-					{ name: 'No Mod', description: 'Emtpy laser sight attechment' },
+					{ name: 'No Mod', description: 'Emtpy laser sight attachment' },
 					weaponMods.laserSight,
 					weaponMods.reconLaserSight,
 				],

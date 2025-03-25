@@ -58,6 +58,7 @@ export default function WeaponPlanner() {
 				<WeaponMods
 					selectedWeapon={selectedWeapon}
 					handleModClick={handleModClick}
+					selectedMods={selectedMods}
 				/>
 			</div>
 
@@ -72,6 +73,7 @@ export default function WeaponPlanner() {
 				onClose={() => setIsModalOpen(false)}
 				activeSlot={activeSlot}
 				onModSelect={handleModSelection}
+				selectedMod={activeSlot ? selectedMods[activeSlot.slotType] : null}
 			/>
 		</div>
 	)

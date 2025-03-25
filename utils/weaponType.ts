@@ -1,4 +1,10 @@
 //weaponType.ts
+
+export interface Materials {
+	name: string
+	quantity: number
+}
+
 export interface Mod {
 	name: string
 	description: string
@@ -11,6 +17,8 @@ export interface Mod {
 	reloadSpeedModifier?: number
 	stabilityModifier?: number
 	valueModifier?: number
+	materialCost: Materials[]
+	research?: string
 }
 
 export interface ModSlot {

@@ -36,6 +36,9 @@ const ModifierDisplay: React.FC<ModifierDisplayProps> = ({ mod }) => {
 				if (modifier.key === 'massModifier') {
 					formattedValue = value > 0 ? `+${value}` : `${value}`
 					valueClass = value > 0 ? 'text-red-500' : 'text-green-500'
+				} else if (modifier.key === 'magazineCapacityModifier') {
+					formattedValue = value > 0 ? `+${value}` : `${value}`
+					valueClass = value > 0 ? 'text-green-500' : 'text-red-500'
 				} else {
 					formattedValue =
 						(value > 0 ? '+' : '') + (value * 100).toFixed(0) + '%'
