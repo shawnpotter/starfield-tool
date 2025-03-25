@@ -1,0 +1,56 @@
+{
+	"categoryOne": [
+		{
+			"id": "module_1",
+			"name": "Module - One",
+			"materialCosts": [
+				{
+					"material": "aluminum",
+					"quantity": 1
+				},
+				{
+					"material": "iron",
+					"quantity": 1
+				},
+				{
+					"material": "tungsten",
+					"quantity": 1
+				}
+			],
+			"production": {
+				"power": 0
+			},
+			"powerCost": {
+				"power": 1,
+				"fuel": 0
+			}
+		}
+	],
+	"categoryTwo": [
+		{
+			"id": "module_2",
+			"name": "Module - Two",
+			"materialCosts": [
+				{
+					"material": "beryllium",
+					"quantity": 1
+				},
+				{
+					"material": "copper",
+					"quantity": 1
+				},
+				{
+					"material": "aluminum",
+					"quantity": 1
+				}
+			],
+			"production": {
+				"power": 1
+			},
+			"powerCost": {
+				"power": 0,
+				"fuel": 0
+			}
+		}
+	]
+}
