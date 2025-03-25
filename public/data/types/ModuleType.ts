@@ -1,3 +1,4 @@
+//ModuleType.ts
 export interface ModuleType {
 	id: string
 	name: string
@@ -13,4 +14,5 @@ export interface ModuleType {
 		fuel: number
 	}
 	amount?: number
+	resource?: string
 }
